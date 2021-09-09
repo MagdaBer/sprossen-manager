@@ -10,6 +10,14 @@
   --font-family-primary: 'Montserrat', sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+
+  /* Color */
+  --color-text: #505151;
+  --color-action: #b37f59;
+  --color-card-primary: #fff;
+  --color-card-secondary: #e3eed5;
+  --color-card-accent: #fdf4ee;
+  --color-button: rgba(230, 241, 243, 0.25);
 }
 
 body {

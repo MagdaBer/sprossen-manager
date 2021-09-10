@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.regular {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+}
+.medium {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+.action {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-action);
+}
+
+.textExtraLarge {
+  font-size: 3.375rem;
+}
+
+.textLarge {
+  font-size: 2.215rem;
+}
+
+.textMedium {
+  font-size: 1.3125rem;
+}
+
+.textSmall {
+  font-size: 0.9375rem;
+}
+
+.textSmallAction {
+  font-size: 0.9375rem;
+}
+
+.textExtraSmall {
+  font-size: 0.8125rem;
+}

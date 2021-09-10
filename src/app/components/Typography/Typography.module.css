@@ -6,14 +6,17 @@ p {
 }
 
 .regular {
+  font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
 }
 .medium {
+  font-family: var(--font-family);
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
 }
 .action {
+  font-family: var(--font-family);
   font-weight: var(--font-weight-medium);
   color: var(--color-action);
 }

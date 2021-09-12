@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import Typography from '../Typography/Typography';
+import styles from './MenueLink.module.css';
 
 export type MenueLinkProps = {
   children: ReactNode;
@@ -11,7 +12,9 @@ export type MenueLinkProps = {
 function MenueLink({ children, to }: MenueLinkProps): JSX.Element {
   return (
     <Link to={to}>
-      <Typography size={'l'}>{children}</Typography>
+      <div className={styles.menue}>
+        <Typography size={'l'}>{children}</Typography>
+      </div>
     </Link>
   );
 }

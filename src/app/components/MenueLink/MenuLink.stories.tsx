@@ -1,6 +1,6 @@
 import React from 'react';
-import MenuLink from './MenueLink';
-import type { MenuLinkProps } from './MenueLink';
+import MenuLink from './MenuLink';
+import type { MenuLinkProps } from './MenuLink';
 import type { Story } from '@storybook/react';
 
 export default {

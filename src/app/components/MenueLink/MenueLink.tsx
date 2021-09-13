@@ -7,11 +7,12 @@ import styles from './MenueLink.module.css';
 export type MenueLinkProps = {
   children: ReactNode;
   to: string;
+  className?: string;
 };
 
-function MenueLink({ children, to }: MenueLinkProps): JSX.Element {
+function MenueLink({ children, to, className }: MenueLinkProps): JSX.Element {
   return (
-    <Link to={to}>
+    <Link to={to} className={className}>
       <div className={styles.menue}>
         <Typography size={'l'}>{children}</Typography>
       </div>

@@ -1,15 +1,15 @@
 import React from 'react';
-import MenueLink from './MenueLink';
-import type { MenueLinkProps } from './MenueLink';
+import MenuLink from './MenueLink';
+import type { MenuLinkProps } from './MenueLink';
 import type { Story } from '@storybook/react';
 
 export default {
   title: 'Component/MenueLink',
-  component: MenueLink,
+  component: MenuLink,
   argTypes: {},
 };
 
-const Template: Story<MenueLinkProps> = (args) => <MenueLink {...args} />;
+const Template: Story<MenuLinkProps> = (args) => <MenuLink {...args} />;
 
 export const Sprossenfinder = Template.bind({});
 Sprossenfinder.args = {

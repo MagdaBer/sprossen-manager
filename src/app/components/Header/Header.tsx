@@ -6,11 +6,12 @@ import Backbutton from '../Backbutton/Backbutton';
 
 type HeaderProps = {
   children: ReactNode;
+  className?: string;
 };
 
-function Header({ children }: HeaderProps): JSX.Element {
+function Header({ children, className }: HeaderProps): JSX.Element {
   return (
-    <header className={style.header}>
+    <header className={`${style.header} ${className}`}>
       <Backbutton />
       <Typography size="l">{children}</Typography>
     </header>

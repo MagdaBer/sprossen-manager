@@ -10,7 +10,7 @@ type ButtonProps = {
 function Button({ children }: ButtonProps): JSX.Element {
   return (
     <button className={styles.button}>
-      <Typography size="sAction">{children}</Typography>
+      <Typography size="xsAction">{children}</Typography>
     </button>
   );
 }

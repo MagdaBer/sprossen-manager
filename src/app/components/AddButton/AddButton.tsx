@@ -8,7 +8,7 @@ type AddButtonProps = {
 
 const AddButton = ({ className }: AddButtonProps): JSX.Element => {
   return (
-    <Link to="/app/pages/sprossenfinder" className={`${className}`}>
+    <Link to="/app/pages/sprossenfinder" className={className}>
       <AddButtonIcon />
     </Link>
   );

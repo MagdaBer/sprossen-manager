@@ -4,11 +4,12 @@ import styles from './Backbutton.module.css';
 
 type BackbuttonProps = {
   className?: string;
+  onClick: () => void;
 };
 
-function Backbutton({ className }: BackbuttonProps): JSX.Element {
+function Backbutton({ className, onClick }: BackbuttonProps): JSX.Element {
   return (
-    <button className={`${styles.button} ${className}`}>
+    <button onClick={onClick} className={`${styles.button} ${className}`}>
       <BackIcon width="0.9rem" height="1.5rem" />
     </button>
   );

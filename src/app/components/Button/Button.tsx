@@ -6,16 +6,12 @@ import Typography from '../Typography/Typography';
 type ButtonProps = {
   children: ReactNode;
   className?: string;
-  onButtonClick: () => void;
+  onClick: () => void;
 };
 
-function Button({
-  children,
-  className,
-  onButtonClick,
-}: ButtonProps): JSX.Element {
+function Button({ children, className, onClick }: ButtonProps): JSX.Element {
   return (
-    <button className={`${styles.button} ${className}`} onClick={onButtonClick}>
+    <button className={`${styles.button} ${className}`} onClick={onClick}>
       <Typography size="xsAction">{children}</Typography>
     </button>
   );

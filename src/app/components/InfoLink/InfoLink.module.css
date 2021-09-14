@@ -1,0 +1,8 @@
+.info {
+  background-color: var(--color-background-primary);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(179, 127, 89, 0.6);
+  width: 6.5rem;
+  height: 1.5rem;
+}

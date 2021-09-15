@@ -12,7 +12,7 @@ type InfoLinkProps = {
 function InfoLink({ children, className }: InfoLinkProps): JSX.Element {
   return (
     <Link to={'/app/pages/info'} className={className}>
-      <Typography classname={style.info} size={'xsAction'}>
+      <Typography className={style.info} size={'xsAction'}>
         {children}
       </Typography>
     </Link>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import Typography from '../Typography/Typography';
-import styles from './MenueLink.module.css';
+import styles from './MenuLink.module.css';
 
 export type MenuLinkProps = {
   children: ReactNode;

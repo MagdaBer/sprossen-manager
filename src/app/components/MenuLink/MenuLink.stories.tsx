@@ -4,7 +4,7 @@ import type { MenuLinkProps } from './MenuLink';
 import type { Story } from '@storybook/react';
 
 export default {
-  title: 'Component/MenueLink',
+  title: 'Component/MenuLink',
   component: MenuLink,
   argTypes: {},
 };

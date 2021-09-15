@@ -4,7 +4,7 @@ import LeafIcon from '../assets/Leaf';
 
 type IconType = 'dropBig' | 'dropSmall' | 'leafBig' | 'leafSmall';
 
-type IconProps = {
+export type IconProps = {
   iconType: IconType;
 };
 

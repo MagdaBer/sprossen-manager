@@ -6,9 +6,21 @@ export default {
   component: Button,
 };
 
-export const OK = (): JSX.Element => <Button>OK</Button>;
-export const Einweichen = (): JSX.Element => <Button>Einweichen</Button>;
-export const Keimen = (): JSX.Element => <Button>Keimen</Button>;
-export const Hinzufügen = (): JSX.Element => <Button>Hinzufügen</Button>;
-export const Status = (): JSX.Element => <Button>Status ändern</Button>;
-export const Entfernen = (): JSX.Element => <Button>Entfernen</Button>;
+export const OK = (): JSX.Element => (
+  <Button onClick={() => console.log('clicked')}>OK</Button>
+);
+export const Einweichen = (): JSX.Element => (
+  <Button onClick={() => console.log('clicked')}>Einweichen</Button>
+);
+export const Keimen = (): JSX.Element => (
+  <Button onClick={() => console.log('clicked')}>Keimen</Button>
+);
+export const Hinzufügen = (): JSX.Element => (
+  <Button onClick={() => console.log('clicked')}>Hinzufügen</Button>
+);
+export const Status = (): JSX.Element => (
+  <Button onClick={() => console.log('clicked')}>Status ändern</Button>
+);
+export const Entfernen = (): JSX.Element => (
+  <Button onClick={() => console.log('clicked')}>Entfernen</Button>
+);

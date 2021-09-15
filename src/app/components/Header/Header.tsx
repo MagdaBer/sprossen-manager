@@ -7,12 +7,13 @@ import Backbutton from '../Backbutton/Backbutton';
 type HeaderProps = {
   children: ReactNode;
   className?: string;
+  goBack: () => void;
 };
 
-function Header({ children, className }: HeaderProps): JSX.Element {
+function Header({ children, className, goBack }: HeaderProps): JSX.Element {
   return (
     <header className={`${style.header} ${className}`}>
-      <Backbutton />
+      <Backbutton onClick={goBack} />
       <Typography size="l">{children}</Typography>
     </header>
   );

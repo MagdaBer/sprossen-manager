@@ -1,0 +1,33 @@
+.box {
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #b37f59;
+  border-radius: 10px;
+  width: 15.063rem;
+  height: 10.875rem;
+}
+
+.infobox {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  min-height: 100%;
+  padding: 0 1.313rem 0 1.313rem;
+}
+
+.infobox:first-child {
+  text-align: center;
+  align-items: center;
+}
+
+.infoboxButton {
+  justify-self: center;
+}
+
+.statusbox {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 70%;
+  padding-top: 1rem;
+}

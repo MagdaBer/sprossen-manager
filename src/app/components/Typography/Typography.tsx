@@ -5,6 +5,7 @@ import styles from './Typography.module.css';
 type TypographyProps = {
   size: 'xs' | 's' | 'm' | 'xsAction' | 'l' | 'xl';
   children: ReactNode;
+  classname?: string;
 };
 
 const sizeMap = {
@@ -19,17 +20,18 @@ const sizeMap = {
 export default function Typography({
   size,
   children,
+  classname,
 }: TypographyProps): JSX.Element {
   switch (size) {
     case 'xs':
     case 's':
     case 'xsAction':
-      return <p className={sizeMap[size]}>{children}</p>;
+      return <p className={`${sizeMap[size]} ${classname}`}>{children}</p>;
     case 'm':
-      return <h3 className={sizeMap[size]}>{children}</h3>;
+      return <h3 className={`${sizeMap[size]} ${classname}`}>{children}</h3>;
     case 'l':
-      return <h2 className={sizeMap[size]}>{children}</h2>;
+      return <h2 className={`${sizeMap[size]} ${classname}`}>{children}</h2>;
     case 'xl':
-      return <h1 className={sizeMap[size]}>{children}</h1>;
+      return <h1 className={`${sizeMap[size]} ${classname}`}>{children}</h1>;
   }
 }

@@ -9,8 +9,8 @@ export type PopUpBoxProps = {
   boxType: 'infoBox' | 'statusBox';
   className?: string;
   onClose: () => void;
-  changeKeimen: () => void;
-  changeEinweichen: () => void;
+  onGerminateClick: () => void;
+  onSoakClick: () => void;
 };
 
 const PopUpBox = ({
@@ -18,8 +18,8 @@ const PopUpBox = ({
   className,
   boxType,
   onClose,
-  changeKeimen,
-  changeEinweichen,
+  onGerminateClick,
+  onSoakClick,
 }: PopUpBoxProps): JSX.Element => {
   const BoxMap = {
     infoBox: (
@@ -35,8 +35,8 @@ const PopUpBox = ({
     statusBox: (
       <div className={style.statusbox}>
         <Typography size="s">{children}</Typography>
-        <Button onClick={changeEinweichen} children="Einweichen" />
-        <Button onClick={changeKeimen} children="Keimen" />
+        <Button onClick={onGerminateClick} children="Einweichen" />
+        <Button onClick={onSoakClick} children="Keimen" />
       </div>
     ),
   };

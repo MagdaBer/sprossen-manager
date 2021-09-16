@@ -1,0 +1,36 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+.box {
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #b37f59;
+  border-radius: 10px;
+  width: 15.063rem;
+  height: 10.875rem;
+}
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+  padding: 1.3rem 1rem 1.5rem 1rem;
+}
+
+.infoboxButton {
+  justify-self: center;
+}
+
+.statusbox {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 70%;
+  padding-top: 1rem;
+}

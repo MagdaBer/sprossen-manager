@@ -25,23 +25,17 @@ export const CardInfo = ({
       <div className={style.circle} />
       <img className={style.image} src={image} />
       <section className={style.cardContent}>
-        <p>
-          <Typography size="m" className={style.header}>
-            {header}
-          </Typography>
-        </p>
-        <div className={style.soak}>
-          <Icons iconType="dropSmall" />
-          <p>
-            <Typography size="s">Einweichen: {hours}</Typography>
-          </p>
-        </div>
-        <div className={style.germinate}>
-          <Icons iconType="leafSmall" />
-          <p>
-            <Typography size="s">Keimen: {days}</Typography>
-          </p>
-        </div>
+        <Typography size="m" className={style.header}>
+          {header}
+        </Typography>
+        <Icons iconType="dropSmall" />
+        <Typography className={style.text} size="s">
+          Einweichen: {hours}
+        </Typography>
+        <Icons iconType="leafSmall" />
+        <Typography className={style.text} size="s">
+          Keimen: {days}
+        </Typography>
       </section>
       <section className={style.cardButtons}>
         <Button onClick={onClickAdd} children="Hinzufügen" />

@@ -9,7 +9,7 @@ export default {
 export const Card = (): JSX.Element => (
   <CardInfo
     image="src/app/components/assets/Buckwheat.png"
-    header="Sonnenblumenkerne"
+    header="Sonnenblumen kerne"
     hours="8 Stunden"
     days="6 Tage"
     onClickAdd={() => console.log('Added')}

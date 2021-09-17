@@ -21,6 +21,8 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
 }
 
 .image {
@@ -31,4 +33,23 @@
   top: 1.2rem;
   border: 0.2em solid;
   border-color: #fdf4ee;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  grid-column-start: 2;
+  align-self: center;
+}
+
+.text {
+  grid-column-start: 2;
 }

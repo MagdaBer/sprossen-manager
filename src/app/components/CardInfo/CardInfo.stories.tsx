@@ -6,4 +6,12 @@ export default {
   component: CardInfo,
 };
 
-export const Card = (): JSX.Element => <CardInfo />;
+export const Card = (): JSX.Element => (
+  <CardInfo
+    image="src/app/components/assets/Buckwheat.png"
+    header="Sonnenblumenkerne"
+    hours="8 Stunden"
+    days="6 Tage"
+    onClickAdd={() => console.log('Added')}
+  />
+);

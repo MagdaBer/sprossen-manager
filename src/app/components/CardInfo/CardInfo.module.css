@@ -9,9 +9,9 @@
   height: 8.5rem;
   width: 8.5rem;
   border-radius: 50%;
-  position: relative;
-  left: 15rem;
-  bottom: 2.5rem;
+  position: absolute;
+  left: 15.5rem;
+  bottom: 5.5rem;
 }
 
 .card {
@@ -20,4 +20,5 @@
   background-color: #fbfbfb;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }

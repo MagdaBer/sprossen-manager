@@ -1,0 +1,49 @@
+.circle {
+  background-color: #e3eed5;
+  height: 8.5rem;
+  width: 8.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 15.7rem;
+  bottom: 5.7rem;
+}
+
+.card {
+  height: 11.563rem;
+  width: 21.375rem;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.image {
+  border-radius: 50%;
+  height: 5rem;
+  position: absolute;
+  left: 15rem;
+  top: 1.2rem;
+  border: 0.2em solid;
+  border-color: #fdf4ee;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  grid-column-start: 2;
+  align-self: center;
+}
+
+.text {
+  grid-column-start: 2;
+}

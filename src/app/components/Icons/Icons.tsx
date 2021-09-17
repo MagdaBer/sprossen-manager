@@ -6,6 +6,7 @@ type IconType = 'dropBig' | 'dropSmall' | 'leafBig' | 'leafSmall';
 
 export type IconProps = {
   iconType: IconType;
+  className?: string;
 };
 
 const iconSizeMap: {
@@ -17,8 +18,8 @@ const iconSizeMap: {
   leafSmall: <LeafIcon width="1.115rem" height="0.773rem" />,
 };
 
-const Icons = ({ iconType }: IconProps): JSX.Element => {
-  return <div>{iconSizeMap[iconType]}</div>;
+const Icons = ({ iconType, className }: IconProps): JSX.Element => {
+  return <div className={className}>{iconSizeMap[iconType]}</div>;
 };
 
 export default Icons;

@@ -28,11 +28,11 @@ export const CardInfo = ({
         <Typography size="m" className={style.header}>
           {header}
         </Typography>
-        <Icons iconType="dropSmall" />
+        <Icons className={style.icons} iconType="dropSmall" />
         <Typography className={style.text} size="s">
           Einweichen: {hours}
         </Typography>
-        <Icons iconType="leafSmall" />
+        <Icons className={style.icons} iconType="leafSmall" />
         <Typography className={style.text} size="s">
           Keimen: {days}
         </Typography>

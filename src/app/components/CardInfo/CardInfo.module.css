@@ -24,34 +24,38 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  display: grid;
 }
 
 .cardSmall {
   height: 11.563rem;
-  grid-template-rows: 3fr 1fr;
 }
 
 .cardContent {
   display: grid;
-  grid-template-columns: 0.55fr 3fr 1fr;
-  grid-template-rows: 2.2fr 1fr 1fr 0.6fr;
+  grid-template-columns: 0.55fr 1fr 1fr 1fr;
+  grid-template-rows: 2.2fr 1fr 1fr;
+  row-gap: 0.4rem;
+  padding: 0.7rem 0 0.7rem 0;
 }
 
 .cardButtons {
   display: flex;
   justify-content: space-between;
-  padding-left: 2.75rem;
-  padding-right: 2.75rem;
+  align-self: center;
+  padding: 0.5rem 2.75rem 0 2.75rem;
 }
 
 .header {
-  grid-column-start: 2;
+  grid-column: 2 / span 2;
   align-self: center;
 }
 
 .text {
   grid-column-start: 2;
+  align-self: center;
+}
+
+.time {
   align-self: center;
 }
 

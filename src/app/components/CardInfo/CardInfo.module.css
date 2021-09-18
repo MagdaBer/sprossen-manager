@@ -59,6 +59,11 @@
   padding-left: 0.5rem;
 }
 
+.textfield {
+  padding: 1rem;
+  text-align: justify;
+}
+
 .cardButtons {
   display: flex;
   align-self: center;

@@ -37,11 +37,17 @@ export const CardInfo = ({
         </Typography>
         <Icons className={style.icons} iconType="dropSmall" />
         <Typography className={style.text} size="s">
-          Einweichen: {hours}
+          Einweichen:
+        </Typography>
+        <Typography className={style.time} size="s">
+          {hours}
         </Typography>
         <Icons className={style.icons} iconType="leafSmall" />
         <Typography className={style.text} size="s">
-          Keimen: {days}
+          Keimen:
+        </Typography>
+        <Typography className={style.time} size="s">
+          {days}
         </Typography>
       </section>
       {type === 'big' && (

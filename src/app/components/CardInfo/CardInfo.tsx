@@ -55,7 +55,11 @@ export const CardInfo = ({
           <Typography size="xs">{textfield}</Typography>
         </section>
       )}
-      <section className={style.cardButtons}>
+      <section
+        className={`${style.cardButtons} ${
+          type === 'small' ? style.buttonTwo : style.buttonOne
+        }`}
+      >
         <Button onClick={onClickAdd} children="Hinzufügen" />
         {type === 'small' && <InfoLink children="Info" />}
       </section>

@@ -5,18 +5,7 @@
   border-radius: 50%;
   position: absolute;
   left: 15.7rem;
-  bottom: 5.7rem;
-}
-
-.card {
-  height: 11.563rem;
-  width: 21.375rem;
-  background-color: #fbfbfb;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  display: grid;
-  grid-template-rows: 3fr 1fr;
+  top: -3rem;
 }
 
 .image {
@@ -27,6 +16,20 @@
   top: 1.2rem;
   border: 0.2em solid;
   border-color: #fdf4ee;
+}
+
+.card {
+  width: 21.375rem;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+}
+
+.cardSmall {
+  height: 11.563rem;
+  grid-template-rows: 3fr 1fr;
 }
 
 .cardContent {

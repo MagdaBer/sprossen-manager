@@ -6,22 +6,29 @@ import Typography from '../Typography/Typography';
 import style from './CardInfo.module.css';
 
 export type CardInfoProps = {
+  type?: 'small' | 'big';
   image: string;
   header: string;
   hours: string;
   days: string;
+  textfield?: string;
   onClickAdd: () => void;
 };
 
 export const CardInfo = ({
+  type = 'small',
   image,
   header,
   hours,
   days,
+  textfield,
   onClickAdd,
 }: CardInfoProps): JSX.Element => {
   return (
-    <article className={style.card}>
+    <article
+      className={`${style.card} 
+      ${type === 'small' ? style.cardSmall : style.cardBig}`}
+    >
       <div className={style.circle} />
       <img className={style.image} src={image} />
       <section className={style.cardContent}>
@@ -37,9 +44,14 @@ export const CardInfo = ({
           Keimen: {days}
         </Typography>
       </section>
+      {type === 'big' && (
+        <section className={style.textfield}>
+          <Typography size="xs">{textfield}</Typography>
+        </section>
+      )}
       <section className={style.cardButtons}>
         <Button onClick={onClickAdd} children="Hinzufügen" />
-        <InfoLink children="Info" />
+        {type === 'small' && <InfoLink children="Info" />}
       </section>
     </article>
   );

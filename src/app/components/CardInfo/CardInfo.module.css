@@ -38,13 +38,6 @@
   padding: 0.7rem 0 0.7rem 0;
 }
 
-.cardButtons {
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  padding: 0.5rem 2.75rem 0 2.75rem;
-}
-
 .header {
   grid-column: 2 / span 2;
   align-self: center;
@@ -64,4 +57,18 @@
   justify-self: center;
   align-self: center;
   padding-left: 0.5rem;
+}
+
+.cardButtons {
+  display: flex;
+  align-self: center;
+  padding: 0.5rem 2.75rem 1rem 2.75rem;
+}
+
+.buttonTwo {
+  justify-content: space-between;
+}
+
+.buttonOne {
+  justify-content: center;
 }

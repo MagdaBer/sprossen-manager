@@ -59,8 +59,10 @@ export const CardStatus = ({
         <Icons
           iconType={`${status === 'Einweichen' ? 'dropBig' : 'leafBig'}`}
         />
-        <Button onClick={onClickChangeStatus} children="Status ändern" />
-        <Button onClick={onClickRemove} children="Entfernen" />
+        <section className={style.cardButtons}>
+          <Button onClick={onClickChangeStatus} children="Status ändern" />
+          <Button onClick={onClickRemove} children="Entfernen" />
+        </section>
       </section>
     </article>
   );

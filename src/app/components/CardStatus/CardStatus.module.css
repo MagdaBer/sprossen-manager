@@ -25,4 +25,30 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding-left: 0.94rem;
+  align-items: center;
+}
+.header {
+  grid-column: 1 / span 2;
+}
+.text {
+  grid-column-start: 1;
+}
+.cardButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.75rem;
+}
+.icon {
+  position: absolute;
+  top: 8rem;
+  left: 17rem;
 }

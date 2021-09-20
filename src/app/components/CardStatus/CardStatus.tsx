@@ -38,13 +38,13 @@ export const CardStatus = ({
         <Typography size="m" className={style.header} children={header} />
         <Typography size="s" className={style.text} children="Status:" />
         <Typography size="s" className={style.status} children={status} />
-        <Typography size="s" className={style.duration} children="Dauer:" />
+        <Typography size="s" className={style.text} children="Dauer:" />
         <Typography
           size="s"
-          className={style.text}
+          className={style.time}
           children={`${status === 'Einweichen' ? hours : days}`}
         />
-        <Typography size="s" className={style.text} children="Gestartet:" />
+        <Typography size="s" className={style.text} children="Start:" />
         <Typography
           size="s"
           className={style.time}
@@ -57,12 +57,13 @@ export const CardStatus = ({
           children={`${enddate} um ${endtime}`}
         />
         <Icons
+          className={style.icon}
           iconType={`${status === 'Einweichen' ? 'dropBig' : 'leafBig'}`}
         />
-        <section className={style.cardButtons}>
-          <Button onClick={onClickChangeStatus} children="Status ändern" />
-          <Button onClick={onClickRemove} children="Entfernen" />
-        </section>
+      </section>
+      <section className={style.cardButtons}>
+        <Button onClick={onClickChangeStatus} children="Status ändern" />
+        <Button onClick={onClickRemove} children="Entfernen" />
       </section>
     </article>
   );

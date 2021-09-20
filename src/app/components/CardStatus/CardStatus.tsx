@@ -36,18 +36,19 @@ export const CardStatus = ({
       <img className={style.image} src={image} />
       <section className={style.cardContent}>
         <Typography size="m" className={style.header} children={header} />
-        <Typography size="s" className={style.text} children="Status:" />
-        <Typography size="s" className={style.status} children={status} />
+        <Typography size="s" className={style.text1} children="Status:" />
+        <Typography size="s" className={style.time1} children={status} />
         <Typography size="s" className={style.text} children="Dauer:" />
         <Typography
           size="s"
           className={style.time}
           children={`${status === 'Einweichen' ? hours : days}`}
         />
-        <Typography size="s" className={style.text} children="Start:" />
+
+        <Typography size="s" className={style.text1} children="Start:" />
         <Typography
           size="s"
-          className={style.time}
+          className={style.time1}
           children={`${startdate} um ${starttime}`}
         />
         <Typography size="s" className={style.text} children="Fertig:" />

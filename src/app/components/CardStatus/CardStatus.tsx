@@ -34,29 +34,31 @@ export const CardStatus = ({
     <article className={style.card}>
       <div className={style.circle} />
       <img className={style.image} src={image} />
-      <section className={style.cardContent}>
-        <Typography size="m" className={style.header} children={header} />
-        <Typography size="s" className={style.text1} children="Status:" />
-        <Typography size="s" className={style.time1} children={status} />
-        <Typography size="s" className={style.text} children="Dauer:" />
+      <Typography size="m" className={style.header} children={header} />
+
+      <section className={style.cardHead}>
+        <Typography size="s" className={style.textHead} children="Status:" />
+        <Typography size="s" className={style.timeHead} children={status} />
+        <Typography size="s" className={style.textHead} children="Dauer:" />
         <Typography
           size="s"
-          className={style.time}
+          className={style.timeHead}
           children={`${status === 'Einweichen' ? hours : days}`}
         />
-
-        <Typography size="s" className={style.text1} children="Start:" />
+      </section>
+      <section className={style.cardBottom}>
+        <Typography size="s" className={style.textBottom} children="Start:" />
+        <Typography size="s" className={style.day} children={startdate} />
+        <Typography size="s" className={style.connector} children="um" />
         <Typography
           size="s"
-          className={style.time1}
-          children={`${startdate} um ${starttime}`}
+          className={style.timeBottom}
+          children={starttime}
         />
-        <Typography size="s" className={style.text} children="Fertig:" />
-        <Typography
-          size="s"
-          className={style.time}
-          children={`${enddate} um ${endtime}`}
-        />
+        <Typography size="s" className={style.textBottom} children="Fertig:" />
+        <Typography size="s" className={style.day} children={enddate} />
+        <Typography size="s" className={style.connector} children="um" />
+        <Typography size="s" className={style.timeBottom} children={endtime} />
         <Icons
           className={style.icon}
           iconType={`${status === 'Einweichen' ? 'dropBig' : 'leafBig'}`}

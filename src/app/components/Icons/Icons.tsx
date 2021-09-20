@@ -12,9 +12,9 @@ export type IconProps = {
 const iconSizeMap: {
   [iconType in IconType]: JSX.Element;
 } = {
-  dropBig: <DropIcon width="1.1813rem" height="2.438rem" />,
+  dropBig: <DropIcon width="2rem" height="2.5rem" />,
   dropSmall: <DropIcon width="1rem" height="0.938rem" />,
-  leafBig: <LeafIcon width="2.492rem" height="1.813rem" />,
+  leafBig: <LeafIcon width="3rem" height="3rem" />,
   leafSmall: <LeafIcon width="1.115rem" height="0.773rem" />,
 };
 

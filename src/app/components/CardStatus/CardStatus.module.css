@@ -31,24 +31,36 @@
 
 .cardContent {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  padding-left: 0.94rem;
-  align-items: center;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: 3.5rem repeat(4, 1fr);
+  padding: 0.7rem 0 0 0.94rem;
 }
+
 .header {
   grid-column: 1 / span 2;
+  align-self: center;
+}
+
+.text1 {
+  grid-column-start: 1;
+  align-self: center;
+}
+.time1 {
+  align-self: center;
 }
 .text {
   grid-column-start: 1;
 }
+
 .cardButtons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2.75rem;
 }
+
 .icon {
   position: absolute;
-  top: 8rem;
+  top: 8.5rem;
   left: 17rem;
 }

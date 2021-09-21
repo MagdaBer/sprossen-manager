@@ -4,7 +4,7 @@ import Typography from '../Typography/Typography';
 import style from './Header.module.css';
 import Backbutton from '../Backbutton/Backbutton';
 
-type HeaderProps = {
+export type HeaderProps = {
   children: ReactNode;
   className?: string;
   onClick: () => void;

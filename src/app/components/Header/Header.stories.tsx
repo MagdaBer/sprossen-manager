@@ -1,17 +1,20 @@
 import React from 'react';
 import Header from './Header';
+import type { Story } from '@storybook/react';
+import type { HeaderProps } from './Header';
 
 export default {
   title: 'Component/Header',
   component: Header,
+  argTypes: {
+    children: {
+      options: ['Meine Sprossen', 'Sprossenfinger', 'Info'],
+      control: { type: 'select' },
+    },
+  },
 };
 
-export const meineSprossen = (): JSX.Element => (
-  <Header onClick={() => console.log('clickback')}>Meine Sprossen</Header>
-);
-export const sprossenFinder = (): JSX.Element => (
-  <Header onClick={() => console.log('clickback')}>Sprossenfinder</Header>
-);
-export const info = (): JSX.Element => (
-  <Header onClick={() => console.log('clickback')}>Info</Header>
-);
+const Template: Story<HeaderProps> = (args) => <Header {...args} />;
+
+export const Heading = Template.bind({});
+Heading.args = {};

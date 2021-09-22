@@ -27,7 +27,7 @@ export const CardInfo = ({
   return (
     <article
       className={`${style.card} 
-      ${type === 'small' ? style.cardSmall : style.cardBig}`}
+      ${type === 'small' && style.cardSmall}`}
     >
       <div className={style.circle} />
       <img className={style.image} src={image} />

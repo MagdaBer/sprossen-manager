@@ -1,0 +1,5 @@
+.container {
+  background-image: url('../../components/assets/Page.png');
+  height: 100vh;
+  background-size: cover;
+}

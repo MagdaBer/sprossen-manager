@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 export default function Home(): JSX.Element {
   return (
-    <main className={style.container}>
-      <Link to="/menu" className={style.header}>
+    <Link to="/menu" className={style.link}>
+      <main className={style.container}>
         <Typography size="xl" children="Sprossen Manager" />
-      </Link>
-    </main>
+      </main>
+    </Link>
   );
 }

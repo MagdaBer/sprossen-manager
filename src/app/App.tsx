@@ -7,7 +7,7 @@ function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/home">
+        <Route path="/">
           <Home />
         </Route>
         <Route path="/landing">

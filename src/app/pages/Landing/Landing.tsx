@@ -7,12 +7,12 @@ export default function Landing(): JSX.Element {
     <main className={style.container}>
       <MenuLink
         className={style.menuFinder}
-        to="/sprossenfinder"
+        to="/finder"
         children="Sprossenfinder"
       />
       <MenuLink
         className={style.menuMy}
-        to="/meinesprossen"
+        to="/mysprouts"
         children="Meine Sprossen"
       />
     </main>

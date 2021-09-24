@@ -1,8 +1,8 @@
 import React from 'react';
 import MenuLink from '../../components/MenuLink/MenuLink';
-import style from './Menu.module.css';
+import style from './Landing.module.css';
 
-export default function Menu(): JSX.Element {
+export default function Landing(): JSX.Element {
   return (
     <main className={style.container}>
       <MenuLink

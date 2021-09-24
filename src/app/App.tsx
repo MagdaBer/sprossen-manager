@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Menu from './pages/Menu/Menu';
+import Landing from './pages/Landing/Landing';
 
 function App(): JSX.Element {
   return (
@@ -10,8 +10,8 @@ function App(): JSX.Element {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/menu">
-          <Menu />
+        <Route path="/landing">
+          <Landing />
         </Route>
       </Switch>
     </BrowserRouter>

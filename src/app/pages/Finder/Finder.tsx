@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import { SPROUTS } from '../../lib/sprouts';
+import style from './Finder.module.css';
 
 export default function Finder(): JSX.Element {
   const [sprouts] = useState(SPROUTS);
@@ -11,13 +12,13 @@ export default function Finder(): JSX.Element {
   }
 
   return (
-    <main>
+    <main className={style.container}>
       <Header children="Sprossenfinder" onClick={() => history.back()} />
-      <div>
+      <section className={style.cards}>
         {sprouts.map((sprout) => (
           <CardInfo {...sprout} onClickAdd={() => handleAddClick()} />
         ))}
-      </div>
+      </section>
     </main>
   );
 }

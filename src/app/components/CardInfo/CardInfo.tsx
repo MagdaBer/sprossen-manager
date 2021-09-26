@@ -7,6 +7,7 @@ import style from './CardInfo.module.css';
 
 export type CardInfoProps = {
   type?: 'small' | 'big';
+  id: string;
   image: string;
   header: string;
   hours: string;
@@ -17,6 +18,7 @@ export type CardInfoProps = {
 
 export const CardInfo = ({
   type = 'small',
+  id,
   image,
   header,
   hours,
@@ -61,7 +63,7 @@ export const CardInfo = ({
         }`}
       >
         <Button onClick={onClickAdd} children="Hinzufügen" />
-        {type === 'small' && <InfoLink children="Info" />}
+        {type === 'small' && <InfoLink to={`/info/${id}`} children="Info" />}
       </section>
     </article>
   );

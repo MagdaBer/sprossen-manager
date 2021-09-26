@@ -6,4 +6,4 @@ export default {
   component: InfoLink,
 };
 
-export const info = (): JSX.Element => <InfoLink>Info</InfoLink>;
+export const info = (): JSX.Element => <InfoLink to="">Info</InfoLink>;

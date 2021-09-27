@@ -58,11 +58,20 @@ export const CardInfo = ({
       </section>
       {type === 'big' && (
         <section className={style.textfield}>
-          <Typography size="s">{textfield}</Typography>
-          <Typography size="m" children="Inhaltsstoffe:" />
-          <Typography size="s">{ingredients}</Typography>
-          <Typography size="m" children="Hinweis:" />
-          <Typography size="s">{note}</Typography>
+          <Typography size="xs">{textfield}</Typography>
+          <Typography
+            className={style.textfieldHeader}
+            size="s"
+            children="Inhaltsstoffe:"
+          />
+          <Typography size="xs">{ingredients}</Typography>
+          <Typography
+            className={style.textfieldHeader}
+            size="s"
+            children="Hinweis:"
+          />
+
+          <Typography size="xs">{note}</Typography>
         </section>
       )}
       <section

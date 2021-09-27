@@ -1,6 +1,6 @@
 import React from 'react';
-import DropIcon from '../assets/SVG/Drop';
-import LeafIcon from '../assets/SVG/Leaf';
+import DropIcon from '../../assets/SVG/Drop';
+import LeafIcon from '../../assets/SVG/Leaf';
 
 type IconType = 'dropBig' | 'dropSmall' | 'leafBig' | 'leafSmall';
 

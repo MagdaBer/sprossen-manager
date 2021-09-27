@@ -10,8 +10,8 @@ export const SPROUTS = [
       ingredients:
         'Adzukibohnensprossen haben einen Eiweißgehalt von 20 bis 25 Prozent und besitzen mit Ausnahme von Tryptophan alle essenziellen Aminosäuren (vor allem Lysin). Sie sind sehr reich an Eisen, Kalium, Kalzium und den Vitaminen A, B, C und E, sowie an wertvollen Ballaststoffen.',
       note: 'Adzukibohnen  enthalten das pflanzliche Gift Phasin (Frassschutz), das sich im Keimvorgang abbaut.. Auf keinen Fall vor dem 4. Tag roh essen! Am besten vor dem Verzehr kurz erhitzen',
-    },
-  },
+    } },
+    
   {
     id: 2,
     image: 'src/assets/images/Alfalfa.png',

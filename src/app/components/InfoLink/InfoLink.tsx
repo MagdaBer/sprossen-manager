@@ -7,11 +7,12 @@ import style from './InfoLink.module.css';
 type InfoLinkProps = {
   children: ReactNode;
   className?: string;
+  to: string;
 };
 
-function InfoLink({ children, className }: InfoLinkProps): JSX.Element {
+function InfoLink({ children, className, to }: InfoLinkProps): JSX.Element {
   return (
-    <Link to={'/app/pages/info'} className={className}>
+    <Link to={to} className={className}>
       <Typography className={style.info} size={'xsAction'}>
         {children}
       </Typography>

@@ -12,6 +12,9 @@ function App(): JSX.Element {
         <Route path="/info/:id">
           <Info />
         </Route>
+        <Route path="/finder">
+          <Finder />
+        </Route>
         <Route path="/landing">
           <Landing />
         </Route>

@@ -13,6 +13,8 @@ export type CardInfoProps = {
   hours: string;
   days: string;
   textfield?: string;
+  ingredients?: string;
+  note?: string;
   onClickAdd: () => void;
 };
 
@@ -24,6 +26,8 @@ export const CardInfo = ({
   hours,
   days,
   textfield,
+  ingredients,
+  note,
   onClickAdd,
 }: CardInfoProps): JSX.Element => {
   return (
@@ -54,7 +58,11 @@ export const CardInfo = ({
       </section>
       {type === 'big' && (
         <section className={style.textfield}>
-          <Typography size="xs">{textfield}</Typography>
+          <Typography size="s">{textfield}</Typography>
+          <Typography size="m" children="Inhaltsstoffe:" />
+          <Typography size="s">{ingredients}</Typography>
+          <Typography size="m" children="Hinweis:" />
+          <Typography size="s">{note}</Typography>
         </section>
       )}
       <section

@@ -9,7 +9,7 @@ export default {
 export const CardSmall = (): JSX.Element => (
   <CardInfo
     id="3"
-    image="src/app/components/assets/Buckwheat.png"
+    image="src/app/assets/images/Buckwheat.png"
     header="Sonnenblumen kerne"
     hours="8 Stunden"
     days="6 Tage"
@@ -20,7 +20,7 @@ export const CardBig = (): JSX.Element => (
   <CardInfo
     id="2"
     type="big"
-    image="src/app/components/assets/Buckwheat.png"
+    image="src/app/assets/images/Buckwheat.png"
     header="Buchweizen"
     hours="8 Stunden"
     days="6 Tage"

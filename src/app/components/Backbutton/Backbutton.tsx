@@ -1,5 +1,5 @@
 import React from 'react';
-import BackIcon from '../assets/SVG/BackIcon';
+import BackIcon from '../../assets/SVG/BackIcon';
 import styles from './Backbutton.module.css';
 
 type BackbuttonProps = {

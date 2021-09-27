@@ -65,12 +65,13 @@ export const CardInfo = ({
             children="Inhaltsstoffe:"
           />
           <Typography size="xs">{ingredients}</Typography>
-          <Typography
-            className={style.textfieldHeader}
-            size="s"
-            children="Hinweis:"
-          />
-
+          {note !== undefined && (
+            <Typography
+              className={style.textfieldHeader}
+              size="s"
+              children="Hinweis:"
+            />
+          )}
           <Typography size="xs">{note}</Typography>
         </section>
       )}

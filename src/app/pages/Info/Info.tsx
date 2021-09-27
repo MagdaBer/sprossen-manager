@@ -3,6 +3,7 @@ import CardInfo from '../../components/CardInfo/CardInfo';
 import Header from '../../components/Header/Header';
 import { SPROUTS } from '../../lib/sprouts';
 import { useParams } from 'react-router';
+import style from './Info.module.css';
 
 export default function Info(): JSX.Element {
   const { id }: { id: string } = useParams();
@@ -13,7 +14,7 @@ export default function Info(): JSX.Element {
     console.log('Add');
   }
   return (
-    <main>
+    <main className={style.container}>
       <Header children="Info" onClick={() => history.back()} />
       {filteredSprout.map((sprout) => (
         <CardInfo type="big" {...sprout} onClickAdd={() => handleOnClick()} />

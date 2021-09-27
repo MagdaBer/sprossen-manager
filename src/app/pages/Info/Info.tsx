@@ -7,7 +7,7 @@ import { useParams } from 'react-router';
 export default function Info(): JSX.Element {
   const { id }: { id: string } = useParams();
 
-  const filteredSprout = SPROUTS.filter((sprout) => sprout.id == id);
+  const filteredSprout = SPROUTS.filter((sprout) => sprout.id === id);
 
   function handleOnClick() {
     console.log('Add');
@@ -16,7 +16,12 @@ export default function Info(): JSX.Element {
     <main>
       <Header children="Info" onClick={() => history.back()} />
       {filteredSprout.map((sprout) => (
-        <CardInfo type="big" {...sprout} onClickAdd={() => handleOnClick()} />
+        <CardInfo
+          key={sprout.id}
+          type="big"
+          {...sprout}
+          onClickAdd={() => handleOnClick()}
+        />
       ))}
     </main>
   );

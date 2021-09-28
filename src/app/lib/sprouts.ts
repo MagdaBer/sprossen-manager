@@ -34,7 +34,6 @@ export const SPROUTS = [
       'Die Pflanzengattung Amaranth bezeichnet ein Pseudogetreide mit mehr als 60 verschiedenen Arten, die zur Familie der Fuchsschwanzgewächse zählen und bereits bei den Inkas und Azteken als heiliges und lebensverlängerndes Grundnahrungsmittel galten.',
     ingredients:
       'Amaranthsprossen enthalten 15 bis 18 Prozent Eiweiß und alle essenziellen Aminosäuren, darunter vor allem Lysin, das bei einer rein pflanzlichen Ernährung sonst schwierig zu bekommen ist. Diese Sprossen sind Top-Lieferanten für Eisen, Kalzium, Magnesium und Zink und äußerste reich an Ballaststoffen, ungesättigten Fettsäuren und Lecithin.',
-    note: '',
   },
   {
     id: '4',
@@ -58,7 +57,6 @@ export const SPROUTS = [
       'Der Brokkoli ist ein Kohlgewächs, das ursprünglich aus Kleinasien stammt, zur Familie der Kreuzblütler gehört und aufgrund seiner neu entdeckten Inhaltsstoffe als Krebsschutz und Immunbooster gilt.',
     ingredients:
       'Im Vergleich zu Brokkoligemüse enthalten Brokkolisprossen bis zu 50-mal mehr Senföl un Schwefelverbindungen, die für ihre krebshemmende Wirkung bekannt sind. Sie bieten reichlich Mineralstoffe (Eisen, Kalium, Kalzium, Natrium, Phosphor und Zink), Vitamine ( B1, B2, B6, E, C, Provitamin A) und sekundäre Pflanzenstoffe. Eine Espressotasse dieser Sprossen liefert laut den Studien der Johns-Hopkins-Universität in Baltimore die gleiche Menge an Antioxidanzien wie 1,5 Kilogramm Brokkoligemüse.',
-    note: '',
   },
   {
     id: '6',

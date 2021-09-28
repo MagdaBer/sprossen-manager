@@ -14,7 +14,7 @@ export default function Finder(): JSX.Element {
       <Header children="Sprossenfinder" onClick={() => history.back()} />
       <section className={style.cards}>
         {SPROUTS.map((sprout) => (
-          <div>
+          <div key={sprout.id}>
             <CardInfo {...sprout} onClickAdd={() => handleAddClick()} />
           </div>
         ))}

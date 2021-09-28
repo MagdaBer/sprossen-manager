@@ -16,11 +16,14 @@ export default function Info(): JSX.Element {
   return (
     <main className={style.container}>
       <Header children="Info" onClick={() => history.back()} />
-      <section className={style.card}>
-        {filteredSprout.map((sprout) => (
-          <CardInfo type="big" {...sprout} onClickAdd={() => handleOnClick()} />
-        ))}
-      </section>
+      {filteredSprout.map((sprout) => (
+        <CardInfo
+          key={sprout.id}
+          type="big"
+          {...sprout}
+          onClickAdd={() => handleOnClick()}
+        />
+      ))}
     </main>
   );
 }

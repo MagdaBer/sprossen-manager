@@ -26,7 +26,7 @@ export const SPROUTS = [
   },
   {
     id: '3',
-    image: '..src/app/assets/images/Amaranth.png',
+    image: '../src/app/assets/images/Amaranth.png',
     header: 'Amaranth',
     hours: '3 Stunden',
     days: '2 Tage',
@@ -38,7 +38,7 @@ export const SPROUTS = [
   },
   {
     id: '4',
-    image: '..src/app/assets/images/Fenugreek.png',
+    image: '../src/app/assets/images/Fenugreek.png',
     header: 'Bockshorn klee',
     hours: '6 Stunden',
     days: '4 Tage',
@@ -50,7 +50,7 @@ export const SPROUTS = [
   },
   {
     id: '5',
-    image: '..src/app/assets/images/Broccoli.png',
+    image: '../src/app/assets/images/Broccoli.png',
     header: 'Brokkoli',
     hours: '8 Stunden',
     days: '5 Tage',
@@ -62,7 +62,7 @@ export const SPROUTS = [
   },
   {
     id: '6',
-    image: '..src/app/assets/images/Buckwheat.png',
+    image: '../src/app/assets/images/Buckwheat.png',
     header: 'Buchweizen',
     hours: '1 Stunde',
     days: '2 Tage',

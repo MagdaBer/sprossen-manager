@@ -61,7 +61,13 @@
 
 .textfield {
   padding: 1rem;
+  display: grid;
   text-align: justify;
+  row-gap: 0.3rem;
+}
+
+.textfieldHeader {
+  text-decoration: underline;
 }
 
 .cardButtons {

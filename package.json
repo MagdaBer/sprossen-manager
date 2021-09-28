@@ -12,8 +12,8 @@
     "prepare": "husky install",
     "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\" ",
     "start": "node dist/server.js",
-    "storybook": "start-storybook -p 6006 -s ..src/app/assets/images",
-    "storybook:build": "build-storybook -o dist/storybook -s ..src/app/assets/images"
+    "storybook": "start-storybook -p 6006 -s src/app/assets/images",
+    "storybook:build": "build-storybook -o dist/storybook -s src/app/assets/images"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

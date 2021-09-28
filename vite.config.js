@@ -7,7 +7,7 @@ const { PORT = 3001 } = process.env;
 
 export default defineConfig({
   plugins: [reactRefresh()],
-  publicDir: '..src/app/assets/images',
+  publicDir: 'app/assets/images',
   server: {
     proxy: {
       '/api': {

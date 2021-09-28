@@ -4,7 +4,6 @@ import Header from '../../components/Header/Header';
 import { SPROUTS } from '../../lib/sprouts';
 import { useParams } from 'react-router';
 import style from './Info.module.css';
-import page from '../../assets/images/Page.png';
 
 export default function Info(): JSX.Element {
   const { id }: { id: string } = useParams();
@@ -15,10 +14,7 @@ export default function Info(): JSX.Element {
     console.log('Add');
   }
   return (
-    <main
-      className={style.container}
-      style={{ backgroundImage: `url(${page})` }}
-    >
+    <main className={style.container}>
       <Header children="Info" onClick={() => history.back()} />
       {filteredSprout.map((sprout) => (
         <CardInfo

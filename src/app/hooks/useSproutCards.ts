@@ -10,8 +10,10 @@ export default function useSproutCards(): {
   function addCard(sprout: Sprout) {
     setSprouts([...sprouts, sprout]);
   }
+
   function removeCard(newSprout: Sprout) {
     setSprouts(sprouts.filter((sprout) => sprout !== newSprout));
   }
+
   return { sprouts, addCard, removeCard };
 }

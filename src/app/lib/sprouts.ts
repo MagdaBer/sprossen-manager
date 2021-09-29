@@ -1,6 +1,6 @@
 export const SPROUTS = [
   {
-    id: '1',
+    id: 1,
     image: '/src/app/assets/images/Adzuki.png',
     header: 'Adzukibohne',
     hours: '8 Stunden',
@@ -13,7 +13,7 @@ export const SPROUTS = [
   },
 
   {
-    id: '2',
+    id: 2,
     image: '/src/app/assets/images/Alfalfa.png',
     header: 'Alfalfa',
     hours: '8 Stunden',
@@ -25,7 +25,7 @@ export const SPROUTS = [
     note: 'Die Sprossen auf keinen Fall vor dem 7. Tag essen, dann erst ist das Pflanzentoxin Canavanin vollständig abgebaut. Gut spülen.',
   },
   {
-    id: '3',
+    id: 3,
     image: '/src/app/assets/images/Amaranth.png',
     header: 'Amaranth',
     hours: '3 Stunden',
@@ -36,7 +36,7 @@ export const SPROUTS = [
       'Amaranthsprossen enthalten 15 bis 18 Prozent Eiweiß und alle essenziellen Aminosäuren, darunter vor allem Lysin, das bei einer rein pflanzlichen Ernährung sonst schwierig zu bekommen ist. Diese Sprossen sind Top-Lieferanten für Eisen, Kalzium, Magnesium und Zink und äußerste reich an Ballaststoffen, ungesättigten Fettsäuren und Lecithin.',
   },
   {
-    id: '4',
+    id: 4,
     image: '/src/app/assets/images/Fenugreek.png',
     header: 'Bockshorn klee',
     hours: '6 Stunden',
@@ -48,7 +48,7 @@ export const SPROUTS = [
     note: 'Ab dem 4. Tag entwickelt sich ein sehr bitterer Geschmack',
   },
   {
-    id: '5',
+    id: 5,
     image: '/src/app/assets/images/Broccoli.png',
     header: 'Brokkoli',
     hours: '8 Stunden',
@@ -59,7 +59,7 @@ export const SPROUTS = [
       'Im Vergleich zu Brokkoligemüse enthalten Brokkolisprossen bis zu 50-mal mehr Senföl un Schwefelverbindungen, die für ihre krebshemmende Wirkung bekannt sind. Sie bieten reichlich Mineralstoffe (Eisen, Kalium, Kalzium, Natrium, Phosphor und Zink), Vitamine ( B1, B2, B6, E, C, Provitamin A) und sekundäre Pflanzenstoffe. Eine Espressotasse dieser Sprossen liefert laut den Studien der Johns-Hopkins-Universität in Baltimore die gleiche Menge an Antioxidanzien wie 1,5 Kilogramm Brokkoligemüse.',
   },
   {
-    id: '6',
+    id: 6,
     image: '/src/app/assets/images/Buckwheat.png',
     header: 'Buchweizen',
     hours: '1 Stunde',

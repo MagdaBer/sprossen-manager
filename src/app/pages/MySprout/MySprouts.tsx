@@ -1,5 +1,4 @@
 import React from 'react';
-import CardInfo from '../../components/CardInfo/CardInfo';
 import Header from '../../components/Header/Header';
 import style from './MySprouts.module.css';
 import useSproutCards from '../../hooks/useSproutCards';

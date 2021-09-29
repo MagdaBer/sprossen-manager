@@ -7,8 +7,9 @@ import style from './Info.module.css';
 
 export default function Info(): JSX.Element {
   const { id }: { id: string } = useParams();
+  const idNbr = parseInt(id, 10);
 
-  const filteredSprout = SPROUTS.filter((sprout) => sprout.id === id);
+  const filteredSprout = SPROUTS.filter((sprout) => sprout.id == idNbr);
 
   function handleOnClick() {
     console.log('Add');

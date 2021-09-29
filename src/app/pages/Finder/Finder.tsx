@@ -3,10 +3,13 @@ import Header from '../../components/Header/Header';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import { SPROUTS } from '../../lib/sprouts';
 import style from './Finder.module.css';
+import type { Sprout } from '../../../types';
+import useSproutCards from '../../hooks/useSproutCards';
 
 export default function Finder(): JSX.Element {
-  function handleAddClick() {
-    console.log('add');
+  const { addCard } = useSproutCards();
+  function handleAddClick(sprout: Sprout) {
+    addCard(sprout);
   }
 
   return (
@@ -15,7 +18,7 @@ export default function Finder(): JSX.Element {
       <section className={style.cards}>
         {SPROUTS.map((sprout) => (
           <div key={sprout.id}>
-            <CardInfo {...sprout} onClickAdd={() => handleAddClick()} />
+            <CardInfo {...sprout} onClickAdd={() => handleAddClick(sprout)} />
           </div>
         ))}
       </section>

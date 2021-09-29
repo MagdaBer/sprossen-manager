@@ -1,0 +1,5 @@
+.container {
+  background-image: url('/src/app/assets/images/Page.png');
+  height: 100vh;
+  background-size: cover;
+}

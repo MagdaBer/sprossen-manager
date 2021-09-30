@@ -20,10 +20,7 @@ function InfoLink({
 }: InfoLinkProps): JSX.Element {
   return (
     <Link to={to} className={className}>
-      <Typography
-        className={`${style.info} ${type === 'big' && style.big}`}
-        size={'xsAction'}
-      >
+      <Typography className={`${style.info} ${style[type]}`} size={'xsAction'}>
         {children}
         {type === 'big' && <ForwardIcon />}
       </Typography>

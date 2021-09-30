@@ -7,3 +7,8 @@ export default {
 };
 
 export const info = (): JSX.Element => <InfoLink to="">Info</InfoLink>;
+export const Sprossen = (): JSX.Element => (
+  <InfoLink type="big" to="">
+    Meine Sprossen
+  </InfoLink>
+);

@@ -7,7 +7,7 @@ import style from './CardInfo.module.css';
 
 export type CardInfoProps = {
   type?: 'small' | 'big';
-  id: string;
+  id: number;
   image: string;
   header: string;
   hours: string;

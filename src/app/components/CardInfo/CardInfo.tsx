@@ -6,7 +6,7 @@ import Typography from '../Typography/Typography';
 import style from './CardInfo.module.css';
 
 export type CardInfoProps = {
-  type?: 'small' | 'big';
+  type?: 'small' | 'big' | 'start';
   id: number;
   image: string;
   header: string;
@@ -15,7 +15,7 @@ export type CardInfoProps = {
   textfield?: string;
   ingredients?: string;
   note?: string;
-  onClickAdd: () => void;
+  onClick: () => void;
 };
 
 export const CardInfo = ({
@@ -28,7 +28,7 @@ export const CardInfo = ({
   textfield,
   ingredients,
   note,
-  onClickAdd,
+  onClick,
 }: CardInfoProps): JSX.Element => {
   return (
     <article
@@ -75,13 +75,15 @@ export const CardInfo = ({
           <Typography size="xs">{note}</Typography>
         </section>
       )}
-      <section
-        className={`${style.cardButtons} ${
-          type === 'small' ? style.buttonTwo : style.buttonOne
-        }`}
-      >
-        <Button onClick={onClickAdd} children="Hinzufügen" />
+      <section className={`${style.cardButtons} ${style[type]}`}>
+        {type !== 'start' && <Button onClick={onClick} children="Hinzufügen" />}
         {type === 'small' && <InfoLink to={`/info/${id}`} children="Info" />}
+        {type === 'start' && (
+          <>
+            <Button onClick={onClick} children="Start" />
+            <Button onClick={onClick} children="Entfernen" />
+          </>
+        )}
       </section>
     </article>
   );

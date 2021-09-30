@@ -76,10 +76,13 @@
   padding: 0.5rem 2.75rem 1rem 2.75rem;
 }
 
-.buttonTwo {
+.small {
   justify-content: space-between;
 }
 
-.buttonOne {
+.big {
   justify-content: center;
+}
+.start {
+  justify-content: space-between;
 }

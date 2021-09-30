@@ -8,25 +8,31 @@ import CardInfo from '../../components/CardInfo/CardInfo';
 export default function MySprouts(): JSX.Element {
   const { sprouts }: { sprouts: Sprout[] } = useSproutCards();
 
-  function handleOnClick() {
+  function handleOnClickStart() {
+    console.log('hello');
+  }
+
+  function handleOnClickRemove() {
     console.log('hello');
   }
 
   return (
     <main className={style.container}>
       <Header children="Meine Sprossen" onClick={() => history.back()} />
-      {sprouts.map((sprout) => (
-        <CardInfo
-          id={sprout.id}
-          image={sprout.image}
-          header={sprout.header}
-          hours={sprout.hours}
-          days={sprout.days}
-          type="start"
-          onClickStart={() => handleOnClick()}
-          onClickRemove={() => handleOnClick()}
-        />
-      ))}
+      <section className={style.cards}>
+        {sprouts.map((sprout) => (
+          <CardInfo
+            id={sprout.id}
+            image={sprout.image}
+            header={sprout.header}
+            hours={sprout.hours}
+            days={sprout.days}
+            type="start"
+            onClickStart={() => handleOnClickStart()}
+            onClickRemove={() => handleOnClickRemove()}
+          />
+        ))}
+      </section>
     </main>
   );
 }

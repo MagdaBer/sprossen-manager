@@ -78,8 +78,12 @@ export const CardInfo = ({
       <section className={`${style.cardButtons} ${style[type]}`}>
         {type !== 'start' && <Button onClick={onClick} children="Hinzufügen" />}
         {type === 'small' && <InfoLink to={`/info/${id}`} children="Info" />}
-        {type === 'start' && <Button onClick={onClick} children="Start" />}
-        {type === 'start' && <Button onClick={onClick} children="Entfernen" />}
+        {type === 'start' && (
+          <>
+            <Button onClick={onClick} children="Start" />
+            <Button onClick={onClick} children="Entfernen" />
+          </>
+        )}
       </section>
     </article>
   );

@@ -6,7 +6,7 @@ import Typography from '../Typography/Typography';
 type ButtonProps = {
   children: ReactNode;
   className?: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 function Button({ children, className, onClick }: ButtonProps): JSX.Element {

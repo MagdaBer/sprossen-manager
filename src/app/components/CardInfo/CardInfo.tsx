@@ -15,7 +15,9 @@ export type CardInfoProps = {
   textfield?: string;
   ingredients?: string;
   note?: string;
-  onClick: () => void;
+  onClickAdd?: () => void;
+  onClickStart?: () => void;
+  onClickRemove?: () => void;
 };
 
 export const CardInfo = ({
@@ -28,7 +30,9 @@ export const CardInfo = ({
   textfield,
   ingredients,
   note,
-  onClick,
+  onClickAdd,
+  onClickStart,
+  onClickRemove,
 }: CardInfoProps): JSX.Element => {
   return (
     <article
@@ -76,12 +80,14 @@ export const CardInfo = ({
         </section>
       )}
       <section className={`${style.cardButtons} ${style[type]}`}>
-        {type !== 'start' && <Button onClick={onClick} children="Hinzufügen" />}
+        {type !== 'start' && (
+          <Button onClick={onClickAdd} children="Hinzufügen" />
+        )}
         {type === 'small' && <InfoLink to={`/info/${id}`} children="Info" />}
         {type === 'start' && (
           <>
-            <Button onClick={onClick} children="Start" />
-            <Button onClick={onClick} children="Entfernen" />
+            <Button onClick={onClickStart} children="Start" />
+            <Button onClick={onClickRemove} children="Entfernen" />
           </>
         )}
       </section>

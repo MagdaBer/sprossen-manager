@@ -18,7 +18,7 @@ export default function Finder(): JSX.Element {
       <section className={style.cards}>
         {SPROUTS.map((sprout) => (
           <div key={sprout.id}>
-            <CardInfo {...sprout} onClick={() => handleAddClick([sprout])} />
+            <CardInfo {...sprout} onClick={() => handleAddClick(sprout)} />
           </div>
         ))}
       </section>

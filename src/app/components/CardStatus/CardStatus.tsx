@@ -33,7 +33,7 @@ export const CardStatus = ({
   onClickRemove,
 }: CardStatusProps): JSX.Element => {
   return (
-    <article className={style.card}>
+    <article className={style.card} key={id}>
       <div className={style.circle} />
       <img className={style.image} src={image} />
       <Typography size="m" className={style.header} children={header} />

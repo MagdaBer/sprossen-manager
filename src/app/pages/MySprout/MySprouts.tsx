@@ -4,34 +4,65 @@ import style from './MySprouts.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
 import type { Sprout } from '../../../types';
 import CardInfo from '../../components/CardInfo/CardInfo';
+import CardStatus from '../../components/CardStatus/CardStatus';
 
 export default function MySprouts(): JSX.Element {
-  const { sprouts }: { sprouts: Sprout[] } = useSproutCards();
+  const { sprouts, editCard, removeCard } = useSproutCards();
 
-  function handleOnClickStart() {
-    console.log('hello');
+  function handleOnClickStart(sprout: Sprout) {
+    editCard({ ...sprout, status: 'soak' });
   }
 
-  function handleOnClickRemove() {
-    console.log('hello');
+  function handleOnClickRemove(sprout: Sprout) {
+    removeCard(sprout);
+  }
+
+  function handleOnClickStatus(sprout: Sprout) {
+    switch (sprout.status) {
+      case 'soak':
+        editCard({ ...sprout, status: 'germinate' });
+        break;
+      case 'germinate':
+        editCard({ ...sprout, status: 'soak' });
+    }
   }
 
   return (
     <main className={style.container}>
       <Header children="Meine Sprossen" onClick={() => history.back()} />
       <section className={style.cards}>
-        {sprouts.map((sprout) => (
-          <CardInfo
-            id={sprout.id}
-            image={sprout.image}
-            header={sprout.header}
-            hours={sprout.hours}
-            days={sprout.days}
-            type="start"
-            onClickStart={() => handleOnClickStart()}
-            onClickRemove={() => handleOnClickRemove()}
-          />
-        ))}
+        {sprouts.map((sprout) => {
+          switch (sprout.status) {
+            case 'start':
+            case undefined:
+              return (
+                <CardInfo
+                  id={sprout.id}
+                  image={sprout.image}
+                  header={sprout.header}
+                  hours={sprout.hours}
+                  days={sprout.days}
+                  type="start"
+                  onClickStart={() => handleOnClickStart(sprout)}
+                  onClickRemove={() => handleOnClickRemove(sprout)}
+                />
+              );
+            case 'soak':
+            case 'germinate':
+              return (
+                <CardStatus
+                  id={sprout.id}
+                  image={sprout.image}
+                  header={sprout.header}
+                  hours={sprout.hours}
+                  days={sprout.days}
+                  type={sprout.status}
+                  onClickChangeStatus={() => handleOnClickStatus(sprout)}
+                  onClickRemove={() => handleOnClickRemove(sprout)}
+                />
+              );
+          }
+        })}
       </section>
     </main>
   );

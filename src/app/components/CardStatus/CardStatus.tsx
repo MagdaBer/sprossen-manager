@@ -5,22 +5,24 @@ import Typography from '../Typography/Typography';
 import style from './CardStatus.module.css';
 
 type CardStatusProps = {
+  id: number;
   image: string;
   header: string;
-  status?: 'Einweichen' | 'Keimen';
+  type?: 'soak' | 'germinate';
   hours: string;
   days: string;
-  startdate: string;
-  starttime: string;
-  enddate: string;
-  endtime: string;
+  startdate?: string;
+  starttime?: string;
+  enddate?: string;
+  endtime?: string;
   onClickChangeStatus: () => void;
   onClickRemove: () => void;
 };
 export const CardStatus = ({
+  id,
   image,
   header,
-  status = 'Einweichen',
+  type = 'soak',
   hours,
   days,
   startdate,
@@ -31,19 +33,23 @@ export const CardStatus = ({
   onClickRemove,
 }: CardStatusProps): JSX.Element => {
   return (
-    <article className={style.card}>
+    <article className={style.card} key={id}>
       <div className={style.circle} />
       <img className={style.image} src={image} />
       <Typography size="m" className={style.header} children={header} />
 
       <section className={style.cardHead}>
         <Typography size="s" className={style.textHead} children="Status:" />
-        <Typography size="s" className={style.timeHead} children={status} />
+        <Typography
+          size="s"
+          className={style.timeHead}
+          children={`${type === 'soak' ? 'Einweichen' : 'Keimen'}`}
+        />
         <Typography size="s" className={style.textHead} children="Dauer:" />
         <Typography
           size="s"
           className={style.timeHead}
-          children={`${status === 'Einweichen' ? hours : days}`}
+          children={`${type === 'soak' ? hours : days}`}
         />
       </section>
       <section className={style.cardBottom}>
@@ -61,7 +67,7 @@ export const CardStatus = ({
         <Typography size="s" className={style.timeBottom} children={endtime} />
         <Icons
           className={style.icon}
-          iconType={`${status === 'Einweichen' ? 'dropBig' : 'leafBig'}`}
+          iconType={`${type === 'soak' ? 'dropBig' : 'leafBig'}`}
         />
       </section>
       <section className={style.cardButtons}>

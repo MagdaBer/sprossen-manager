@@ -11,4 +11,5 @@ export type Sprout = {
   textfield: string;
   ingredients: string;
   note?: string;
+  status?: 'start' | 'soak' | 'germinate';
 };

@@ -11,3 +11,7 @@
   row-gap: 1.2rem;
   overflow-y: scroll;
 }
+.link {
+  justify-self: center;
+  margin-bottom: 1.5rem;
+}

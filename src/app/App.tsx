@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Landing from './pages/Landing/Landing';
 import Info from './pages/Info/Info';
 import Finder from './pages/Finder/Finder';
+import MySprouts from './pages/MySprout/MySprouts';
 
 function App(): JSX.Element {
   return (
@@ -11,6 +12,9 @@ function App(): JSX.Element {
       <Switch>
         <Route path="/info/:id">
           <Info />
+        </Route>
+        <Route path="/mysprouts">
+          <MySprouts />
         </Route>
         <Route path="/finder">
           <Finder />

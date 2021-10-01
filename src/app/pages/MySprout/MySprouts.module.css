@@ -4,14 +4,11 @@
   background-size: cover;
   display: grid;
   justify-content: center;
-  grid-template-rows: 5.5rem auto;
+  grid-template-rows: 5.5rem;
 }
 .cards {
   display: grid;
   row-gap: 1.2rem;
   overflow-y: scroll;
-}
-.link {
-  justify-self: center;
-  margin-bottom: 1.5rem;
+  grid-template-rows: repeat(auto-fit, max(12rem));
 }

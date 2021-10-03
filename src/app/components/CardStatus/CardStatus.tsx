@@ -9,8 +9,8 @@ type CardStatusProps = {
   image: string;
   header: string;
   type?: 'soak' | 'germinate';
-  hours: string;
-  days: string;
+  hours: number;
+  days: number;
   startdate?: string;
   starttime?: string;
   enddate?: string;
@@ -49,7 +49,9 @@ export const CardStatus = ({
         <Typography
           size="s"
           className={style.timeHead}
-          children={`${type === 'soak' ? hours : days}`}
+          children={`${
+            type === 'soak' ? hours + ' ' + 'Stunden' : days + ' ' + 'Tage'
+          }`}
         />
       </section>
       <section className={style.cardBottom}>

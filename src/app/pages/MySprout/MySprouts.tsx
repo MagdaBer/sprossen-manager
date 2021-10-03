@@ -29,7 +29,11 @@ export default function MySprouts(): JSX.Element {
 
   return (
     <main className={style.container}>
-      <Header children="Meine Sprossen" onClick={() => history.back()} />
+      <Header
+        className={style.header}
+        children="Meine Sprossen"
+        onClick={() => history.back()}
+      />
       <section className={style.cards}>
         {sprouts.map((sprout) => {
           switch (sprout.status) {
@@ -37,6 +41,7 @@ export default function MySprouts(): JSX.Element {
             case undefined:
               return (
                 <CardInfo
+                  key={sprout.id}
                   id={sprout.id}
                   image={sprout.image}
                   header={sprout.header}
@@ -51,6 +56,7 @@ export default function MySprouts(): JSX.Element {
             case 'germinate':
               return (
                 <CardStatus
+                  key={sprout.id}
                   id={sprout.id}
                   image={sprout.image}
                   header={sprout.header}

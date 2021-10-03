@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import style from './MySprouts.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
 import type { Sprout } from '../../../types';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import CardStatus from '../../components/CardStatus/CardStatus';
+import { addDays, addHours, format } from 'date-fns';
+import PopUpBox from '../../components/PopUpBox/PopUpBox';
 
 export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
+  const [startModal, setStartModal] = useState(false);
 
   function handleOnClickStart(sprout: Sprout) {
+    setStartModal(true);
     const current = new Date();
-    const startDay = `${current.getDate()}.${current.getMonth() + 1}.`;
-    const startTime = `${current.getHours()}:${current.getMinutes()} Uhr`;
-
+    const startDay = format(current, 'dd.MM');
+    const startTime = `${format(current, 'hh:mm')} Uhr`;
+    const future = addHours(current, sprout.hours);
+    const endDay = format(future, 'dd.MM');
+    const endTime = `${format(future, 'hh:mm')} Uhr`;
     editCard({
       ...sprout,
       status: 'soak',
       startdate: `${startDay}`,
       starttime: `${startTime}`,
+      enddate: `${endDay}`,
+      endtime: `${endTime}`,
     });
   }
 
@@ -27,12 +35,36 @@ export default function MySprouts(): JSX.Element {
   }
 
   function handleOnClickStatus(sprout: Sprout) {
+    const current = new Date();
+    const startDay = format(current, 'dd.MM');
+    const startTime = `${format(current, 'hh:mm')} Uhr`;
+    const futureGerminate = addDays(current, sprout.days);
+    const futureSoak = addHours(current, sprout.hours);
+    const endDayGerminate = format(futureGerminate, 'dd.MM');
+    const endTimeGerminate = `${format(futureGerminate, 'hh:mm')} Uhr`;
+    const endDaySoak = format(futureSoak, 'dd.MM');
+    const endTimeSoak = `${format(futureSoak, 'hh:mm')} Uhr`;
     switch (sprout.status) {
       case 'soak':
-        editCard({ ...sprout, status: 'germinate' });
+        editCard({
+          ...sprout,
+          status: 'germinate',
+          startdate: `${startDay}`,
+          starttime: `${startTime}`,
+          enddate: `${endDayGerminate}`,
+          endtime: `${endTimeGerminate}`,
+        });
+
         break;
       case 'germinate':
-        editCard({ ...sprout, status: 'soak' });
+        editCard({
+          ...sprout,
+          status: 'soak',
+          startdate: `${startDay}`,
+          starttime: `${startTime}`,
+          enddate: `${endDaySoak}`,
+          endtime: `${endTimeSoak}`,
+        });
     }
   }
 
@@ -74,6 +106,8 @@ export default function MySprouts(): JSX.Element {
                   type={sprout.status}
                   startdate={sprout.startdate}
                   starttime={sprout.starttime}
+                  enddate={sprout.enddate}
+                  endtime={sprout.endtime}
                   onClickChangeStatus={() => handleOnClickStatus(sprout)}
                   onClickRemove={() => handleOnClickRemove(sprout)}
                 />

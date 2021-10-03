@@ -17,3 +17,10 @@
   row-gap: 1.2rem;
   grid-template-rows: auto;
 }
+
+.addButton {
+  display: flex;
+  height: 65%;
+  align-items: center;
+  justify-content: center;
+}

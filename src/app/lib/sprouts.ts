@@ -3,8 +3,8 @@ export const SPROUTS = [
     id: 1,
     image: '/src/app/assets/images/Adzuki.png',
     header: 'Adzukibohne',
-    hours: '8 Stunden',
-    days: '4 Tage',
+    hours: 8,
+    days: 4,
     textfield:
       'Die Adzuki- bzw. Azukibohne gehört innerhalb der Familie der Hülsenfrüchtler zur Unterfamilie der Schmetterlingsblütler und ist vor allem im asiatischen Raum verbreitet. Sie zählt zu den proteinreichen Pflanzlichen Nahrungsmitteln und sorgt für asiatischen Flair auf dem Teller.',
     ingredients:
@@ -16,8 +16,8 @@ export const SPROUTS = [
     id: 2,
     image: '/src/app/assets/images/Alfalfa.png',
     header: 'Alfalfa',
-    hours: '8 Stunden',
-    days: '7 Tage',
+    hours: 8,
+    days: 7,
     textfield:
       'Alfalfa (Luzerne) ist eine Schmetterlingsblütler innerhalb der Familie der Hülsenfrüchtler und stammt ursprünglich aus Asien. Der Name Alfalfa heißt übersetzt “gutes Futter”. Gekeimt ist ein es ein Vitalstoffwunder, dessen Nährwert und Heilkraft durch zahlreiche Studien bestätigt wird. Alfalfasprossen eignen sich bestens als erste grüne Nahrung für Kleinkinder.',
     ingredients:
@@ -28,8 +28,8 @@ export const SPROUTS = [
     id: 3,
     image: '/src/app/assets/images/Amaranth.png',
     header: 'Amaranth',
-    hours: '3 Stunden',
-    days: '2 Tage',
+    hours: 3,
+    days: 2,
     textfield:
       'Die Pflanzengattung Amaranth bezeichnet ein Pseudogetreide mit mehr als 60 verschiedenen Arten, die zur Familie der Fuchsschwanzgewächse zählen und bereits bei den Inkas und Azteken als heiliges und lebensverlängerndes Grundnahrungsmittel galten.',
     ingredients:
@@ -39,8 +39,8 @@ export const SPROUTS = [
     id: 4,
     image: '/src/app/assets/images/Fenugreek.png',
     header: 'Bockshorn klee',
-    hours: '6 Stunden',
-    days: '4 Tage',
+    hours: 6,
+    days: 4,
     textfield:
       'Der Bockshornklee ist eine Hülsenfrucht und unter vielen Namen (Philosophenklee, Heusamen etc) bekannt. Er ist nähr- und vitalstoffreich und ein Heilmitten der Ayurvedischen und er Traditionellen Chinesischen Medizin.',
     ingredients:
@@ -51,8 +51,8 @@ export const SPROUTS = [
     id: 5,
     image: '/src/app/assets/images/Broccoli.png',
     header: 'Brokkoli',
-    hours: '8 Stunden',
-    days: '5 Tage',
+    hours: 8,
+    days: 5,
     textfield:
       'Der Brokkoli ist ein Kohlgewächs, das ursprünglich aus Kleinasien stammt, zur Familie der Kreuzblütler gehört und aufgrund seiner neu entdeckten Inhaltsstoffe als Krebsschutz und Immunbooster gilt.',
     ingredients:
@@ -62,8 +62,8 @@ export const SPROUTS = [
     id: 6,
     image: '/src/app/assets/images/Buckwheat.png',
     header: 'Buchweizen',
-    hours: '1 Stunde',
-    days: '2 Tage',
+    hours: 1,
+    days: 2,
     textfield:
       'Buchweizen ist eine uralte Heilpflanze und gehört zur Familie der Knöterichgewächse. Er stammt ursprünglich aus der Mongolei uns ist eine gesunde und glutenfreie Alternative zu Getreide, leicht zubereitet und vielseitig einsetzbar.',
     ingredients:

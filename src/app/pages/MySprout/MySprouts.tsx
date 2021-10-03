@@ -10,7 +10,16 @@ export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
 
   function handleOnClickStart(sprout: Sprout) {
-    editCard({ ...sprout, status: 'soak' });
+    const current = new Date();
+    const startDay = `${current.getDate()}.${current.getMonth() + 1}.`;
+    const startTime = `${current.getHours()}:${current.getMinutes()} Uhr`;
+
+    editCard({
+      ...sprout,
+      status: 'soak',
+      startdate: `${startDay}`,
+      starttime: `${startTime}`,
+    });
   }
 
   function handleOnClickRemove(sprout: Sprout) {
@@ -63,6 +72,8 @@ export default function MySprouts(): JSX.Element {
                   hours={sprout.hours}
                   days={sprout.days}
                   type={sprout.status}
+                  startdate={sprout.startdate}
+                  starttime={sprout.starttime}
                   onClickChangeStatus={() => handleOnClickStatus(sprout)}
                   onClickRemove={() => handleOnClickRemove(sprout)}
                 />

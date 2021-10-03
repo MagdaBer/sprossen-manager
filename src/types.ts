@@ -12,4 +12,6 @@ export type Sprout = {
   ingredients: string;
   note?: string;
   status?: 'start' | 'soak' | 'germinate';
+  startdate?: string;
+  starttime?: string;
 };

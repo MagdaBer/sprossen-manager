@@ -1,7 +1,7 @@
 export const SPROUTS = [
   {
     id: 1,
-    image: '/src/app/assets/images/Adzuki.png',
+    image: '../src/app/assets/images/Adzuki.png',
     header: 'Adzukibohne',
     hours: 8,
     days: 4,
@@ -14,7 +14,7 @@ export const SPROUTS = [
 
   {
     id: 2,
-    image: '/src/app/assets/images/Alfalfa.png',
+    image: '../src/app/assets/images/Alfalfa.png',
     header: 'Alfalfa',
     hours: 8,
     days: 7,
@@ -26,7 +26,7 @@ export const SPROUTS = [
   },
   {
     id: 3,
-    image: '/src/app/assets/images/Amaranth.png',
+    image: '../src/app/assets/images/Amaranth.png',
     header: 'Amaranth',
     hours: 3,
     days: 2,
@@ -37,7 +37,7 @@ export const SPROUTS = [
   },
   {
     id: 4,
-    image: '/src/app/assets/images/Fenugreek.png',
+    image: '../src/app/assets/images/Fenugreek.png',
     header: 'Bockshorn klee',
     hours: 6,
     days: 4,
@@ -49,7 +49,7 @@ export const SPROUTS = [
   },
   {
     id: 5,
-    image: '/src/app/assets/images/Broccoli.png',
+    image: '../src/app/assets/images/Broccoli.png',
     header: 'Brokkoli',
     hours: 8,
     days: 5,
@@ -60,7 +60,7 @@ export const SPROUTS = [
   },
   {
     id: 6,
-    image: '/src/app/assets/images/Buckwheat.png',
+    image: '../src/app/assets/images/Buckwheat.png',
     header: 'Buchweizen',
     hours: 1,
     days: 2,

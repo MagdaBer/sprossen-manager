@@ -27,7 +27,16 @@ export default function Finder(): JSX.Element {
           <div key={sprout.id}>
             <CardInfo
               {...sprout}
-              onClickAdd={() => handleAddClick({ ...sprout, status: 'start' })}
+              onClickAdd={() =>
+                handleAddClick({
+                  ...sprout,
+                  status: 'start',
+                  startdate: '',
+                  starttime: '',
+                  enddate: '',
+                  endtime: '',
+                })
+              }
             />
           </div>
         ))}

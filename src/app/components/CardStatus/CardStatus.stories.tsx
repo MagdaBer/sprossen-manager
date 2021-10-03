@@ -11,8 +11,8 @@ export const CardSoak = (): JSX.Element => (
     id={1}
     image="src/app/assets/images/Buckwheat.png"
     header="Sonenblumenkerne"
-    days="8 Tage"
-    hours="8 Stunden"
+    days={8}
+    hours={8}
     type="soak"
     startdate="03.09."
     starttime="20:00 Uhr"
@@ -27,8 +27,8 @@ export const CardGerminate = (): JSX.Element => (
     id={2}
     image="src/app/assets/images/Buckwheat.png"
     header="Buchweizen"
-    days="8 Tage"
-    hours="8 Stunden"
+    days={8}
+    hours={8}
     type="soak"
     startdate="03.09."
     starttime="20:00 Uhr"

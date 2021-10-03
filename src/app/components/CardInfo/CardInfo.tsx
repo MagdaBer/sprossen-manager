@@ -10,8 +10,8 @@ export type CardInfoProps = {
   id: number;
   image: string;
   header: string;
-  hours: string;
-  days: string;
+  hours: number;
+  days: number;
   textfield?: string;
   ingredients?: string;
   note?: string;
@@ -50,14 +50,14 @@ export const CardInfo = ({
           Einweichen:
         </Typography>
         <Typography className={style.time} size="s">
-          {hours}
+          {hours} Stunden
         </Typography>
         <Icons className={style.icons} iconType="leafSmall" />
         <Typography className={style.text} size="s">
           Keimen:
         </Typography>
         <Typography className={style.time} size="s">
-          {days}
+          {days} Tage
         </Typography>
       </section>
       {type === 'big' && (

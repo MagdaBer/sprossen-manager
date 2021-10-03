@@ -11,8 +11,8 @@ export const CardSmall = (): JSX.Element => (
     id={1}
     image="src/app/assets/images/Buckwheat.png"
     header="Sonnenblumen kerne"
-    hours="8 Stunden"
-    days="6 Tage"
+    hours={8}
+    days={6}
     onClickAdd={() => console.log('Added')}
   />
 );
@@ -22,8 +22,8 @@ export const CardBig = (): JSX.Element => (
     type="big"
     image="src/app/assets/images/Buckwheat.png"
     header="Buchweizen"
-    hours="8 Stunden"
-    days="6 Tage"
+    hours={8}
+    days={6}
     textfield="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     onClickAdd={() => console.log('Added')}
   />
@@ -35,8 +35,8 @@ export const CardStart = (): JSX.Element => (
     type="start"
     image="src/app/assets/images/Buckwheat.png"
     header="Buchweizen"
-    hours="7 Stunden"
-    days="6 Tage"
+    hours={7}
+    days={6}
     onClickStart={() => console.log('start')}
     onClickRemove={() => console.log('remove')}
   />

@@ -6,6 +6,7 @@ import type { Sprout } from '../../../types';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import CardStatus from '../../components/CardStatus/CardStatus';
 import { addDays, addHours, format } from 'date-fns';
+import AddButton from '../../components/AddButton/AddButton';
 
 export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
@@ -72,7 +73,11 @@ export default function MySprouts(): JSX.Element {
         children="Meine Sprossen"
         onClick={() => history.back()}
       />
-
+      {sprouts.length === 0 && (
+        <section className={style.addButton}>
+          <AddButton />
+        </section>
+      )}
       <section className={style.cards}>
         {sprouts.map((sprout) => {
           switch (sprout.status) {

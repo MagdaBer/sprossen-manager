@@ -25,7 +25,7 @@ export default function Info(): JSX.Element {
             key={sprout.id}
             type="big"
             {...sprout}
-            onClick={() => handleAddClick(sprout)}
+            onClickAdd={() => handleAddClick({ ...sprout, status: 'start' })}
           />
         ))}
       </section>

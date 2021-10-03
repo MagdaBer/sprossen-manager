@@ -33,6 +33,8 @@ export default function Finder(): JSX.Element {
                   status: 'start',
                   startdate: '',
                   starttime: '',
+                  enddate: '',
+                  endtime: '',
                 })
               }
             />

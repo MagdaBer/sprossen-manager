@@ -1,7 +1,7 @@
 export const SPROUTS = [
   {
     id: 1,
-    image: '../src/app/assets/images/Adzuki.png',
+    image: 'src/app/assets/lib/Adzuki.png',
     header: 'Adzukibohne',
     hours: 8,
     days: 4,
@@ -14,7 +14,7 @@ export const SPROUTS = [
 
   {
     id: 2,
-    image: '../src/app/assets/images/Alfalfa.png',
+    image: '/src/app/assets/lib/Alfalfa.png',
     header: 'Alfalfa',
     hours: 8,
     days: 7,

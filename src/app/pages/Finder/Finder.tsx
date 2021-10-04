@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import CardInfo from '../../components/CardInfo/CardInfo';
-import { SPROUTS } from '../../lib/sprouts';
+import { SPROUTS } from '../../assets/lib/sprouts';
 import style from './Finder.module.css';
 import type { Sprout } from '../../../types';
 import useSproutCards from '../../hooks/useSproutCards';

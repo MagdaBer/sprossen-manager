@@ -1,7 +1,7 @@
 import React from 'react';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import Header from '../../components/Header/Header';
-import { SPROUTS } from '../../lib/sprouts';
+import { SPROUTS } from '../../assets/lib/sprouts';
 import { useParams } from 'react-router';
 import style from './Info.module.css';
 import useSproutCards from '../../hooks/useSproutCards';

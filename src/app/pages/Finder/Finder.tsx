@@ -6,8 +6,10 @@ import style from './Finder.module.css';
 import type { Sprout } from '../../../types';
 import useSproutCards from '../../hooks/useSproutCards';
 import InfoLink from '../../components/InfoLink/InfoLink';
+import { useHistory } from 'react-router';
 
 export default function Finder(): JSX.Element {
+  const history = useHistory();
   const { addCard } = useSproutCards();
   function handleAddClick(sprout: Sprout) {
     addCard(sprout);
@@ -15,7 +17,10 @@ export default function Finder(): JSX.Element {
 
   return (
     <main className={style.container}>
-      <Header children="Sprossenfinder" onClick={() => history.back()} />
+      <Header
+        children="Sprossenfinder"
+        onClick={() => history.push('/landing')}
+      />
       <InfoLink
         className={style.link}
         type="big"

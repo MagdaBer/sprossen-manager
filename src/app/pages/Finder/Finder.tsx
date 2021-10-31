@@ -39,7 +39,7 @@ export default function Finder(): JSX.Element {
                   startdate: '',
                   starttime: '',
                   enddate: '',
-                  endtime: '',
+                
                 })
               }
             />

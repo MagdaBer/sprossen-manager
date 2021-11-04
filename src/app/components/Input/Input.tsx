@@ -1,8 +1,7 @@
 import React from 'react';
-import type { ReactNode } from 'react';
+import styles from './Input.module.css';
 
 export type InputProps = {
-  children: ReactNode;
   className?: string;
   type: string;
   value: string;
@@ -20,7 +19,7 @@ function Input({
   return (
     <input
       type={type}
-      className={className}
+      className={`${styles.input} ${className}`}
       placeholder={placeholder}
       value={value}
       onChange={onChange}

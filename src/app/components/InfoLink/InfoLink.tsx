@@ -1,12 +1,11 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import Typography from '../Typography/Typography';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './InfoLink.module.css';
 import ForwardIcon from '../../assets/SVG/Forward';
-import {TypographyTypes} from "../../enums/TypographyTypes";
-import {InfoLinkTypes} from "../../enums/InfoLinkTypes";
-
+import { TypographyTypes } from '../../enums/TypographyTypes';
+import { InfoLinkTypes } from '../../enums/InfoLinkTypes';
 
 type InfoLinkProps = {
   type?: InfoLinkTypes;
@@ -25,7 +24,11 @@ function InfoLink({
     <Link to={to} className={className}>
       <Typography
         className={`${style.info} ${style[type]}`}
-        size={type === InfoLinkTypes.SMALL ? TypographyTypes.XSACTION : TypographyTypes.SACTION}
+        size={
+          type === InfoLinkTypes.SMALL
+            ? TypographyTypes.XSACTION
+            : TypographyTypes.SACTION
+        }
       >
         {children}
         {type === InfoLinkTypes.BIG && <ForwardIcon />}

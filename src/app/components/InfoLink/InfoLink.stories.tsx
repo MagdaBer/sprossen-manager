@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoLink from './InfoLink';
-import {InfoLinkTypes} from "../../enums/InfoLinkTypes";
+import { InfoLinkTypes } from '../../enums/InfoLinkTypes';
 
 export default {
   title: 'Component/InfoLink',

@@ -4,10 +4,9 @@ import Icons from '../Icons/Icons';
 import InfoLink from '../InfoLink/InfoLink';
 import Typography from '../Typography/Typography';
 import style from './CardInfo.module.css';
-import {CardInfoTypes} from "../../enums/CardInfoTypes";
-import {TypographyTypes} from "../../enums/TypographyTypes";
-import {IconTypes} from "../../enums/IconTypes";
-
+import { CardInfoTypes } from '../../enums/CardInfoTypes';
+import { TypographyTypes } from '../../enums/TypographyTypes';
+import { IconTypes } from '../../enums/IconTypes';
 
 export type CardInfoProps = {
   type?: CardInfoTypes;
@@ -44,7 +43,7 @@ export const CardInfo = ({
       ${type !== CardInfoTypes.BIG && style.cardSmall}`}
     >
       <div className={style.circle} />
-      <img className={style.image} src={image} alt="sprout"/>
+      <img className={style.image} src={image} alt="sprout" />
       <section className={style.cardContent}>
         <Typography size={TypographyTypes.M} className={style.header}>
           {header}
@@ -84,10 +83,12 @@ export const CardInfo = ({
         </section>
       )}
       <section className={`${style.cardButtons} ${style[type]}`}>
-        {type !== CardInfoTypes.START&& (
+        {type !== CardInfoTypes.START && (
           <Button onClick={onClickAdd} children="Hinzufügen" />
         )}
-        {type === CardInfoTypes.SMALL && <InfoLink to={`/info/${id}`} children="Info" />}
+        {type === CardInfoTypes.SMALL && (
+          <InfoLink to={`/info/${id}`} children="Info" />
+        )}
         {type === CardInfoTypes.START && (
           <>
             <Button onClick={onClickStart} children="Start" />

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import Typography from '../Typography/Typography';
 import style from './Header.module.css';
 import Backbutton from '../Backbutton/Backbutton';
-import {TypographyTypes} from "../../enums/TypographyTypes";
+import { TypographyTypes } from '../../enums/TypographyTypes';
 
 export type HeaderProps = {
   children: ReactNode;

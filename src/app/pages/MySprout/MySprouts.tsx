@@ -2,14 +2,13 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import style from './MySprouts.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
-import type {Sprout} from '../../../types';
+import type { Sprout } from '../../../types';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import CardStatus from '../../components/CardStatus/CardStatus';
-import {addDays, addHours, format} from 'date-fns';
+import { addDays, addHours, format } from 'date-fns';
 import AddButton from '../../components/AddButton/AddButton';
-import {CardInfoTypes} from "../../enums/CardInfoTypes";
-import {CardStatusTypes} from "../../enums/CardStatusTypes";
-
+import { CardInfoTypes } from '../../enums/CardInfoTypes';
+import { CardStatusTypes } from '../../enums/CardStatusTypes';
 
 export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();

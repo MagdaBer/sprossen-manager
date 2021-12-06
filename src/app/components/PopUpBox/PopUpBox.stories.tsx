@@ -1,15 +1,15 @@
 import React from 'react';
-import type {PopUpBoxProps} from './PopUpBox';
+import type { PopUpBoxProps } from './PopUpBox';
 import PopUpBox from './PopUpBox';
-import {PopUpBoxTypes} from "../../enums/PopUpBoxTypes";
-import type {Story} from "@storybook/react";
+import { PopUpBoxTypes } from '../../enums/PopUpBoxTypes';
+import type { Story } from '@storybook/react';
 
 export default {
   title: 'Component/PopUpBox',
   component: PopUpBox,
 };
 
-const Template: Story<PopUpBoxProps> = (args) => <PopUpBox {...args}  />;
+const Template: Story<PopUpBoxProps> = (args) => <PopUpBox {...args} />;
 
 export const Info = Template.bind({});
 Info.args = {

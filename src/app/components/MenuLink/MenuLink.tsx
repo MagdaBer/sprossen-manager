@@ -1,9 +1,9 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Typography from '../Typography/Typography';
 import style from './MenuLink.module.css';
-import {TypographyTypes} from "../../enums/TypographyTypes";
+import { TypographyTypes } from '../../enums/TypographyTypes';
 
 export type MenuLinkProps = {
   children: ReactNode;

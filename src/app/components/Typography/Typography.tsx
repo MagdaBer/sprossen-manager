@@ -1,7 +1,7 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './Typography.module.css';
-import {TypographyTypes} from "../../enums/TypographyTypes";
+import { TypographyTypes } from '../../enums/TypographyTypes';
 
 type TypographyProps = {
   size: TypographyTypes;
@@ -9,7 +9,7 @@ type TypographyProps = {
   className?: string;
 };
 
-const sizeMap: {[size in TypographyTypes]:ReactNode}={
+const sizeMap: { [size in TypographyTypes]: ReactNode } = {
   xs: `${styles.textExtraSmall} ${styles.medium}`,
   xsAction: `${styles.textExtraSmall} ${styles.action}`,
   s: `${styles.textSmall} ${styles.medium}`,

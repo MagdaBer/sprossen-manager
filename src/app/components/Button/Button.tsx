@@ -1,8 +1,8 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './Button.module.css';
 import Typography from '../Typography/Typography';
-import {TypographyTypes} from "../../enums/TypographyTypes";
+import { TypographyTypes } from '../../enums/TypographyTypes';
 
 type ButtonProps = {
   children: ReactNode;

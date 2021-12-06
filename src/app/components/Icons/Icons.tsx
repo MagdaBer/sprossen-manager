@@ -1,7 +1,7 @@
 import React from 'react';
 import DropIcon from '../../assets/SVG/Drop';
 import LeafIcon from '../../assets/SVG/Leaf';
-import type {IconTypes} from "../../enums/IconTypes";
+import type { IconTypes } from '../../enums/IconTypes';
 
 export type IconProps = {
   iconType: IconTypes;

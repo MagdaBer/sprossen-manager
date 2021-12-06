@@ -1,6 +1,6 @@
 import React from 'react';
 import CardInfo from './CardInfo';
-import {CardInfoTypes} from "../../enums/CardInfoTypes";
+import { CardInfoTypes } from '../../enums/CardInfoTypes';
 
 export default {
   title: 'Component/CardInfo',

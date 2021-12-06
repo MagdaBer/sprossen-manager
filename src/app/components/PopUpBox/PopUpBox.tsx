@@ -1,12 +1,14 @@
+import type {ReactNode} from 'react';
 import React from 'react';
 import Typography from '../Typography/Typography';
 import Button from '../Button/Button';
-import type { ReactNode } from 'react';
 import style from './PopUpBox.module.css';
+import {TypographyTypes} from "../../enums/TypographyTypes";
+import type {PopUpBoxTypes} from "../../enums/PopUpBoxTypes";
 
 export type PopUpBoxProps = {
   children: ReactNode;
-  boxType: 'infoBox' | 'statusBox';
+  boxType: PopUpBoxTypes;
   className?: string;
   onClose: () => void;
   onGerminateClick: () => void;
@@ -21,10 +23,10 @@ const PopUpBox = ({
   onGerminateClick,
   onSoakClick,
 }: PopUpBoxProps): JSX.Element => {
-  const BoxMap = {
+  const BoxMap: {[boxType in PopUpBoxTypes]:JSX.Element} = {
     infoBox: (
       <div className={style.infobox}>
-        <Typography size="s">{children}</Typography>
+        <Typography size={TypographyTypes.S}>{children}</Typography>
         <Button
           className={style.infoboxButton}
           onClick={onClose}
@@ -34,7 +36,7 @@ const PopUpBox = ({
     ),
     statusBox: (
       <div className={style.statusbox}>
-        <Typography size="s">{children}</Typography>
+        <Typography size={TypographyTypes.S}>{children}</Typography>
         <Button onClick={onGerminateClick} children="Einweichen" />
         <Button onClick={onSoakClick} children="Keimen" />
       </div>

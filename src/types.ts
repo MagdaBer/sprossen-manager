@@ -1,6 +1,5 @@
-export type Sprouts = {
-  sprouts: Sprout[];
-};
+import type { CardInfoTypes } from './app/enums/CardInfoTypes';
+import type { CardStatusTypes } from './app/enums/CardStatusTypes';
 
 export type Sprout = {
   id: number;
@@ -11,7 +10,7 @@ export type Sprout = {
   textfield: string;
   ingredients: string;
   note?: string;
-  status?: 'start' | 'soak' | 'germinate';
+  status?: CardInfoTypes.START | CardStatusTypes;
   startdate?: string;
   starttime?: string;
   enddate?: string;

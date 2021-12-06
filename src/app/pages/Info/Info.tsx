@@ -1,11 +1,12 @@
 import React from 'react';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import Header from '../../components/Header/Header';
-import { SPROUTS } from '../../lib/sprouts';
-import { useParams } from 'react-router';
+import {SPROUTS} from '../../lib/sprouts';
+import {useParams} from 'react-router';
 import style from './Info.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
-import type { Sprout } from '../../../types';
+import type {Sprout} from '../../../types';
+import {CardInfoTypes} from "../../enums/CardInfoTypes";
 
 export default function Info(): JSX.Element {
   const { addCard } = useSproutCards();
@@ -23,9 +24,9 @@ export default function Info(): JSX.Element {
         {filteredSprout.map((sprout) => (
           <CardInfo
             key={sprout.id}
-            type="big"
+            type={CardInfoTypes.BIG}
             {...sprout}
-            onClickAdd={() => handleAddClick({ ...sprout, status: 'start' })}
+            onClickAdd={() => handleAddClick({ ...sprout, status: CardInfoTypes.START})}
           />
         ))}
       </section>

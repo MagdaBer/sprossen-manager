@@ -2,11 +2,14 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import style from './MySprouts.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
-import type { Sprout } from '../../../types';
+import type {Sprout} from '../../../types';
 import CardInfo from '../../components/CardInfo/CardInfo';
 import CardStatus from '../../components/CardStatus/CardStatus';
-import { addDays, addHours, format } from 'date-fns';
+import {addDays, addHours, format} from 'date-fns';
 import AddButton from '../../components/AddButton/AddButton';
+import {CardInfoTypes} from "../../enums/CardInfoTypes";
+import {CardStatusTypes} from "../../enums/CardStatusTypes";
+
 
 export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
@@ -20,7 +23,7 @@ export default function MySprouts(): JSX.Element {
     const endTime = `${format(future, 'HH:mm')} Uhr`;
     editCard({
       ...sprout,
-      status: 'soak',
+      status: CardStatusTypes.BEGIN,
       startdate: `${startDay}`,
       starttime: `${startTime}`,
       enddate: `${endDay}`,
@@ -43,10 +46,10 @@ export default function MySprouts(): JSX.Element {
     const endDaySoak = format(futureSoak, 'dd.MM');
     const endTimeSoak = `${format(futureSoak, 'HH:mm')} Uhr`;
     switch (sprout.status) {
-      case 'soak':
+      case CardStatusTypes.BEGIN:
         editCard({
           ...sprout,
-          status: 'germinate',
+          status: CardStatusTypes.PROGRESS,
           startdate: `${startDay}`,
           starttime: `${startTime}`,
           enddate: `${endDayGerminate}`,
@@ -54,10 +57,10 @@ export default function MySprouts(): JSX.Element {
         });
 
         break;
-      case 'germinate':
+      case CardStatusTypes.PROGRESS:
         editCard({
           ...sprout,
-          status: 'soak',
+          status: CardStatusTypes.BEGIN,
           startdate: `${startDay}`,
           starttime: `${startTime}`,
           enddate: `${endDaySoak}`,
@@ -81,7 +84,7 @@ export default function MySprouts(): JSX.Element {
       <section className={style.cards}>
         {sprouts.map((sprout) => {
           switch (sprout.status) {
-            case 'start':
+            case CardInfoTypes.START:
             case undefined:
               return (
                 <CardInfo
@@ -91,13 +94,13 @@ export default function MySprouts(): JSX.Element {
                   header={sprout.header}
                   hours={sprout.hours}
                   days={sprout.days}
-                  type="start"
+                  type={CardInfoTypes.START}
                   onClickStart={() => handleOnClickStart(sprout)}
                   onClickRemove={() => handleOnClickRemove(sprout)}
                 />
               );
-            case 'soak':
-            case 'germinate':
+            case CardStatusTypes.BEGIN:
+            case CardStatusTypes.PROGRESS:
               return (
                 <CardStatus
                   key={sprout.id}

@@ -1,5 +1,6 @@
 import React from 'react';
 import InfoLink from './InfoLink';
+import {InfoLinkTypes} from "../../enums/InfoLinkTypes";
 
 export default {
   title: 'Component/InfoLink',
@@ -8,7 +9,7 @@ export default {
 
 export const info = (): JSX.Element => <InfoLink to="">Info</InfoLink>;
 export const Sprossen = (): JSX.Element => (
-  <InfoLink type="big" to="">
+  <InfoLink type={InfoLinkTypes.BIG} to="">
     Meine Sprossen
   </InfoLink>
 );

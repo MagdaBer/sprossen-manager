@@ -1,6 +1,7 @@
 import React from 'react';
-import PopUpBox from './PopUpBox';
 import type { PopUpBoxProps } from './PopUpBox';
+import PopUpBox from './PopUpBox';
+import { PopUpBoxTypes } from '../../enums/PopUpBoxTypes';
 import type { Story } from '@storybook/react';
 
 export default {
@@ -12,12 +13,12 @@ const Template: Story<PopUpBoxProps> = (args) => <PopUpBox {...args} />;
 
 export const Info = Template.bind({});
 Info.args = {
-  boxType: 'infoBox',
+  boxType: PopUpBoxTypes.INFOBOX,
   children: 'Bitte lasse deine Sprossen jetzt 8 Stunden einweichen',
 };
 
 export const Status = Template.bind({});
 Status.args = {
-  boxType: 'statusBox',
+  boxType: PopUpBoxTypes.STATUSBOX,
   children: 'Status ändern',
 };

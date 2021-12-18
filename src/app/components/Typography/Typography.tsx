@@ -1,14 +1,15 @@
-import React from 'react';
 import type { ReactNode } from 'react';
+import React from 'react';
 import styles from './Typography.module.css';
+import { TypographyTypes } from '../../enums/TypographyTypes';
 
 type TypographyProps = {
-  size: 'xs' | 's' | 'm' | 'xsAction' | 'sAction' | 'l' | 'xl';
+  size: TypographyTypes;
   children: ReactNode;
   className?: string;
 };
 
-const sizeMap = {
+const sizeMap: { [size in TypographyTypes]: ReactNode } = {
   xs: `${styles.textExtraSmall} ${styles.medium}`,
   xsAction: `${styles.textExtraSmall} ${styles.action}`,
   s: `${styles.textSmall} ${styles.medium}`,
@@ -24,16 +25,16 @@ export default function Typography({
   className,
 }: TypographyProps): JSX.Element {
   switch (size) {
-    case 'xs':
-    case 's':
-    case 'sAction':
-    case 'xsAction':
+    case TypographyTypes.XS:
+    case TypographyTypes.S:
+    case TypographyTypes.SACTION:
+    case TypographyTypes.XSACTION:
       return <p className={`${sizeMap[size]} ${className}`}>{children}</p>;
-    case 'm':
+    case TypographyTypes.M:
       return <h3 className={`${sizeMap[size]} ${className}`}>{children}</h3>;
-    case 'l':
+    case TypographyTypes.L:
       return <h2 className={`${sizeMap[size]} ${className}`}>{children}</h2>;
-    case 'xl':
+    case TypographyTypes.XL:
       return <h1 className={`${sizeMap[size]} ${className}`}>{children}</h1>;
   }
 }

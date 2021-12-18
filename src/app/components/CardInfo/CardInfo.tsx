@@ -4,9 +4,12 @@ import Icons from '../Icons/Icons';
 import InfoLink from '../InfoLink/InfoLink';
 import Typography from '../Typography/Typography';
 import style from './CardInfo.module.css';
+import { CardInfoTypes } from '../../enums/CardInfoTypes';
+import { TypographyTypes } from '../../enums/TypographyTypes';
+import { IconTypes } from '../../enums/IconTypes';
 
 export type CardInfoProps = {
-  type?: 'small' | 'big' | 'start';
+  type?: CardInfoTypes;
   id: number;
   image: string;
   header: string;
@@ -21,7 +24,7 @@ export type CardInfoProps = {
 };
 
 export const CardInfo = ({
-  type = 'small',
+  type = CardInfoTypes.SMALL,
   id,
   image,
   header,
@@ -37,54 +40,56 @@ export const CardInfo = ({
   return (
     <article
       className={`${style.card} 
-      ${type !== 'big' && style.cardSmall}`}
+      ${type !== CardInfoTypes.BIG && style.cardSmall}`}
     >
       <div className={style.circle} />
-      <img className={style.image} src={image} />
+      <img className={style.image} src={image} alt="sprout" />
       <section className={style.cardContent}>
-        <Typography size="m" className={style.header}>
+        <Typography size={TypographyTypes.M} className={style.header}>
           {header}
         </Typography>
-        <Icons className={style.icons} iconType="dropSmall" />
-        <Typography className={style.text} size="s">
+        <Icons className={style.icons} iconType={IconTypes.DROPSMALL} />
+        <Typography className={style.text} size={TypographyTypes.S}>
           Einweichen:
         </Typography>
-        <Typography className={style.time} size="s">
+        <Typography className={style.time} size={TypographyTypes.S}>
           {hours} Stunden
         </Typography>
-        <Icons className={style.icons} iconType="leafSmall" />
-        <Typography className={style.text} size="s">
+        <Icons className={style.icons} iconType={IconTypes.LEAFSMALL} />
+        <Typography className={style.text} size={TypographyTypes.S}>
           Keimen:
         </Typography>
-        <Typography className={style.time} size="s">
+        <Typography className={style.time} size={TypographyTypes.S}>
           {days} Tage
         </Typography>
       </section>
-      {type === 'big' && (
+      {type === CardInfoTypes.BIG && (
         <section className={style.textfield}>
-          <Typography size="xs">{textfield}</Typography>
+          <Typography size={TypographyTypes.XS}>{textfield}</Typography>
           <Typography
             className={style.textfieldHeader}
-            size="s"
+            size={TypographyTypes.S}
             children="Inhaltsstoffe:"
           />
-          <Typography size="xs">{ingredients}</Typography>
+          <Typography size={TypographyTypes.XS}>{ingredients}</Typography>
           {note !== undefined && (
             <Typography
               className={style.textfieldHeader}
-              size="s"
+              size={TypographyTypes.S}
               children="Hinweis:"
             />
           )}
-          <Typography size="xs">{note}</Typography>
+          <Typography size={TypographyTypes.XS}>{note}</Typography>
         </section>
       )}
       <section className={`${style.cardButtons} ${style[type]}`}>
-        {type !== 'start' && (
+        {type !== CardInfoTypes.START && (
           <Button onClick={onClickAdd} children="Hinzufügen" />
         )}
-        {type === 'small' && <InfoLink to={`/info/${id}`} children="Info" />}
-        {type === 'start' && (
+        {type === CardInfoTypes.SMALL && (
+          <InfoLink to={`/info/${id}`} children="Info" />
+        )}
+        {type === CardInfoTypes.START && (
           <>
             <Button onClick={onClickStart} children="Start" />
             <Button onClick={onClickRemove} children="Entfernen" />

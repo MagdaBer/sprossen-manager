@@ -7,6 +7,8 @@ import type { Sprout } from '../../../types';
 import useSproutCards from '../../hooks/useSproutCards';
 import InfoLink from '../../components/InfoLink/InfoLink';
 import { useHistory } from 'react-router';
+import { CardInfoTypes } from '../../enums/CardInfoTypes';
+import { InfoLinkTypes } from '../../enums/InfoLinkTypes';
 
 export default function Finder(): JSX.Element {
   const history = useHistory();
@@ -23,7 +25,7 @@ export default function Finder(): JSX.Element {
       />
       <InfoLink
         className={style.link}
-        type="big"
+        type={InfoLinkTypes.BIG}
         children="Meine Sprossen"
         to="/mysprouts"
       />
@@ -35,7 +37,7 @@ export default function Finder(): JSX.Element {
               onClickAdd={() =>
                 handleAddClick({
                   ...sprout,
-                  status: 'start',
+                  status: CardInfoTypes.START,
                   startdate: '',
                   starttime: '',
                   enddate: '',

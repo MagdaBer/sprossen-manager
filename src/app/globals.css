@@ -15,6 +15,8 @@
   --font-family: 'Montserrat', sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-size: 1rem;
+  --line-height: 1.75rem;
 
   /* Color */
   --color-text: #505151;
@@ -27,5 +29,25 @@
 
 body {
   font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height);
+  color: var(--color-text);
   margin: 0;
+}
+
+h1 {
+  font-weight: var(--font-weight-regular);
+  font-size: 3.375rem;
+  line-height: normal;
+}
+
+h2 {
+  font-weight: var(--font-weight-medium);
+  font-size: 2.215rem;
+}
+
+h3 {
+  font-weight: var(--font-weight-medium);
+  font-size: 1.3125rem;
 }

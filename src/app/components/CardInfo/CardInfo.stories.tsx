@@ -11,7 +11,7 @@ export const CardSmall = (): JSX.Element => (
   <CardInfo
     id={1}
     image="src/app/assets/images/Buckwheat.png"
-    header="Sonnenblumen kerne"
+    header="Sonnenblumenkerne"
     hours={8}
     days={6}
     onClickAdd={() => console.log('Added')}

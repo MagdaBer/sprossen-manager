@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
-import Icons from '../Icons/Icons';
+import Icons from '../Icon/Icon';
 import Typography from '../Typography/Typography';
 import style from './CardStatus.module.css';
 import { CardStatusTypes } from '../../enums/CardStatusTypes';
@@ -44,7 +44,6 @@ export const CardStatus = ({
         className={style.header}
         children={header}
       />
-
       <section className={style.cardHead}>
         <Typography
           size={TypographyTypes.S}

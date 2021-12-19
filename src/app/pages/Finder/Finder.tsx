@@ -20,6 +20,7 @@ export default function Finder(): JSX.Element {
   return (
     <main className={style.container}>
       <Header
+        className={style.header}
         children="Sprossenfinder"
         onClick={() => history.push('/landing')}
       />

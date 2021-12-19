@@ -2,17 +2,23 @@
   background-image: url('/src/app/assets/images/Page.png');
   height: 100vh;
   background-size: cover;
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 5.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 2rem;
 }
+
 .cards {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 1.2rem;
   overflow-y: scroll;
 }
+
+.header {
+  padding-top: 1.5rem;
+}
+
 .link {
-  justify-self: center;
-  margin-bottom: 1.5rem;
+  padding: 1.5rem 0 1.5rem 0;
 }

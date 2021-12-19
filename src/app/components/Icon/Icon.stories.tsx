@@ -1,10 +1,10 @@
 import React from 'react';
-import Icons from './Icons';
+import Icons from './Icon';
 import type { Story } from '@storybook/react';
-import type { IconProps } from './Icons';
+import type { IconProps } from './Icon';
 
 export default {
-  title: 'Component/Icons',
+  title: 'Component/Icon',
   component: Icons,
   argTypes: {
     iconType: {
@@ -14,7 +14,7 @@ export default {
   },
 };
 
-const Template: Story<IconProps> = (args) => <Icons {...args} />;
+const Template: Story<IconProps> = (args) => <Icon {...args} />;
 
 export const Icon = Template.bind({});
 Icon.args = {};

@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import Icons from '../Icon/Icon';
 import Typography from '../Typography/Typography';
 import style from './CardStatus.module.css';
-import { CardStatusTypes } from '../../enums/CardStatusTypes';
+import { CardTypes } from '../../enums/CardTypes';
 import { TypographyTypes } from '../../enums/TypographyTypes';
 import { IconTypes } from '../../enums/IconTypes';
 
@@ -53,9 +53,7 @@ export const CardStatus = ({
         <Typography
           size={TypographyTypes.S}
           className={style.timeHead}
-          children={`${
-            type === CardStatusTypes.BEGIN ? 'Einweichen' : 'Keimen'
-          }`}
+          children={`${type === CardTypes.BEGIN ? 'Einweichen' : 'Keimen'}`}
         />
         <Typography
           size={TypographyTypes.S}
@@ -66,7 +64,7 @@ export const CardStatus = ({
           size={TypographyTypes.S}
           className={style.timeHead}
           children={`${
-            type === CardStatusTypes.BEGIN
+            type === CardTypes.BEGIN
               ? hours + ' ' + 'Stunden'
               : days + ' ' + 'Tage'
           }`}
@@ -116,9 +114,7 @@ export const CardStatus = ({
         <Icons
           className={style.icon}
           iconType={
-            type === CardStatusTypes.BEGIN
-              ? IconTypes.DROPBIG
-              : IconTypes.LEAFBIG
+            type === CardTypes.BEGIN ? IconTypes.DROPBIG : IconTypes.LEAFBIG
           }
         />
       </section>

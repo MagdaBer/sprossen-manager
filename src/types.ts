@@ -1,5 +1,4 @@
-import type { CardInfoTypes } from './app/enums/CardInfoTypes';
-import type { CardStatusTypes } from './app/enums/CardStatusTypes';
+import type { CardTypes } from './app/enums/CardTypes';
 
 export type Sprout = {
   id: number;
@@ -10,7 +9,7 @@ export type Sprout = {
   textfield: string;
   ingredients: string;
   note?: string;
-  status?: CardInfoTypes.START | CardStatusTypes;
+  status?: CardTypes;
   startdate?: string;
   starttime?: string;
   enddate?: string;

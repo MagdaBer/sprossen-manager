@@ -83,6 +83,8 @@ export default function MySprouts(): JSX.Element {
         {sprouts.map((sprout) => {
           switch (sprout.status) {
             case CardTypes.START:
+            case CardTypes.BIG:
+            case CardTypes.SMALL:
             case undefined:
               return (
                 <CardInfo

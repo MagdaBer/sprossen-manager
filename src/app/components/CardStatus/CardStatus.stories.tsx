@@ -1,6 +1,6 @@
 import React from 'react';
 import CardStatus from './CardStatus';
-import { CardStatusTypes } from '../../enums/CardStatusTypes';
+import { CardTypes } from '../../enums/CardTypes';
 
 export default {
   title: 'Component/CardStatus',
@@ -14,7 +14,7 @@ export const CardSoak = (): JSX.Element => (
     header="Sonenblumenkerne"
     days={8}
     hours={8}
-    type={CardStatusTypes.BEGIN}
+    type={CardTypes.BEGIN}
     startdate="03.09."
     starttime="20:00 Uhr"
     enddate="11.09."
@@ -30,7 +30,7 @@ export const CardGerminate = (): JSX.Element => (
     header="Buchweizen"
     days={8}
     hours={8}
-    type={CardStatusTypes.PROGRESS}
+    type={CardTypes.PROGRESS}
     startdate="03.09."
     starttime="20:00 Uhr"
     enddate="11.09."

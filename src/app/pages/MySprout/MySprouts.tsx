@@ -7,8 +7,7 @@ import CardInfo from '../../components/CardInfo/CardInfo';
 import CardStatus from '../../components/CardStatus/CardStatus';
 import { addDays, addHours, format } from 'date-fns';
 import AddButton from '../../components/AddButton/AddButton';
-import { CardInfoTypes } from '../../enums/CardInfoTypes';
-import { CardStatusTypes } from '../../enums/CardStatusTypes';
+import { CardTypes } from '../../enums/CardTypes';
 
 export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
@@ -22,7 +21,7 @@ export default function MySprouts(): JSX.Element {
     const endTime = `${format(future, 'HH:mm')} Uhr`;
     editCard({
       ...sprout,
-      status: CardStatusTypes.BEGIN,
+      status: CardTypes.BEGIN,
       startdate: `${startDay}`,
       starttime: `${startTime}`,
       enddate: `${endDay}`,
@@ -45,10 +44,10 @@ export default function MySprouts(): JSX.Element {
     const endDaySoak = format(futureSoak, 'dd.MM');
     const endTimeSoak = `${format(futureSoak, 'HH:mm')} Uhr`;
     switch (sprout.status) {
-      case CardStatusTypes.BEGIN:
+      case CardTypes.BEGIN:
         editCard({
           ...sprout,
-          status: CardStatusTypes.PROGRESS,
+          status: CardTypes.PROGRESS,
           startdate: `${startDay}`,
           starttime: `${startTime}`,
           enddate: `${endDayGerminate}`,
@@ -56,10 +55,10 @@ export default function MySprouts(): JSX.Element {
         });
 
         break;
-      case CardStatusTypes.PROGRESS:
+      case CardTypes.PROGRESS:
         editCard({
           ...sprout,
-          status: CardStatusTypes.BEGIN,
+          status: CardTypes.BEGIN,
           startdate: `${startDay}`,
           starttime: `${startTime}`,
           enddate: `${endDaySoak}`,
@@ -83,7 +82,7 @@ export default function MySprouts(): JSX.Element {
       <section className={style.cards}>
         {sprouts.map((sprout) => {
           switch (sprout.status) {
-            case CardInfoTypes.START:
+            case CardTypes.START:
             case undefined:
               return (
                 <CardInfo
@@ -93,13 +92,13 @@ export default function MySprouts(): JSX.Element {
                   header={sprout.header}
                   hours={sprout.hours}
                   days={sprout.days}
-                  type={CardInfoTypes.START}
+                  type={CardTypes.START}
                   onClickStart={() => handleOnClickStart(sprout)}
                   onClickRemove={() => handleOnClickRemove(sprout)}
                 />
               );
-            case CardStatusTypes.BEGIN:
-            case CardStatusTypes.PROGRESS:
+            case CardTypes.BEGIN:
+            case CardTypes.PROGRESS:
               return (
                 <CardStatus
                   key={sprout.id}

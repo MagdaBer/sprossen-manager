@@ -12,11 +12,6 @@ type CardListProps = {
   className?: string;
 };
 
-const firstData = [
-  { key: 'Status', value: 'Einweichen', iconType: 'dropSmall' },
-  { key: 'Dauer', value: '8 Stunden' },
-];
-
 const CardList = (props: CardListProps): JSX.Element => {
   const { className, data } = props;
   return (

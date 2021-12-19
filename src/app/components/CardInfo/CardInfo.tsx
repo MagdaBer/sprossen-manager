@@ -23,7 +23,6 @@ export type CardInfoProps = {
   endtime?: string;
   onClickAdd?: () => void;
   onClickStart?: () => void;
-  ClickChangeStatus: () => void;
   onClickRemove?: () => void;
 };
 

@@ -6,7 +6,7 @@ import { useParams } from 'react-router';
 import style from './Info.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
 import type { Sprout } from '../../../types';
-import { CardInfoTypes } from '../../enums/CardInfoTypes';
+import { CardTypes } from '../../enums/CardTypes';
 
 export default function Info(): JSX.Element {
   const { addCard } = useSproutCards();
@@ -24,10 +24,10 @@ export default function Info(): JSX.Element {
         {filteredSprout.map((sprout) => (
           <CardInfo
             key={sprout.id}
-            type={CardInfoTypes.BIG}
+            type={CardTypes.BIG}
             {...sprout}
             onClickAdd={() =>
-              handleAddClick({ ...sprout, status: CardInfoTypes.START })
+              handleAddClick({ ...sprout, status: CardTypes.START })
             }
           />
         ))}

@@ -25,38 +25,32 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  display: grid;
-  grid-template-rows: 3.5rem 1.5fr 1.5fr 1.5fr;
-  row-gap: 1rem;
 }
 
-.cardHead {
-  display: grid;
-  grid-template-columns: 4rem repeat(4, 1fr);
-  padding-left: 1.5rem;
+.cardHead *,
+.cardBottom * {
+  display: flex;
+  padding: 0.1rem;
+}
+
+.cardHead__status *,
+.cardHead__duration * {
+  flex: 0 0 25%;
 }
 
 .header {
-  align-self: center;
-  padding: 1rem 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding-left: 1rem;
 }
 
-.textHead {
-  grid-column-start: 1;
+.cardHead {
+  padding: 0 0 1rem 1rem;
 }
 
 .cardBottom {
-  display: grid;
-  grid-template-columns: 4rem 0.8fr 0.5fr 3fr;
-  padding-left: 1.5rem;
-}
-
-.textBottom {
-  grid-column-start: 1;
-}
-
-.day {
-  grid-column-start: 2;
+  padding: 0 0 1rem 1rem;
 }
 
 .cardButtons {

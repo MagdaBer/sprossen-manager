@@ -7,7 +7,7 @@ import type { Sprout } from '../../../types';
 import useSproutCards from '../../hooks/useSproutCards';
 import InfoLink from '../../components/InfoLink/InfoLink';
 import { useHistory } from 'react-router';
-import { CardInfoTypes } from '../../enums/CardInfoTypes';
+import { CardTypes } from '../../enums/CardTypes';
 import { InfoLinkTypes } from '../../enums/InfoLinkTypes';
 
 export default function Finder(): JSX.Element {
@@ -20,6 +20,7 @@ export default function Finder(): JSX.Element {
   return (
     <main className={style.container}>
       <Header
+        className={style.header}
         children="Sprossenfinder"
         onClick={() => history.push('/landing')}
       />
@@ -37,7 +38,7 @@ export default function Finder(): JSX.Element {
               onClickAdd={() =>
                 handleAddClick({
                   ...sprout,
-                  status: CardInfoTypes.START,
+                  status: CardTypes.START,
                   startdate: '',
                   starttime: '',
                   enddate: '',

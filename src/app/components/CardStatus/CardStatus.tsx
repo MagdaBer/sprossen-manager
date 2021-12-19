@@ -11,7 +11,7 @@ type CardStatusProps = {
   id: number;
   image: string;
   header: string;
-  type?: CardStatusTypes;
+  type?: CardTypes;
   hours: number;
   days: number;
   startdate?: string;
@@ -25,7 +25,7 @@ export const CardStatus = ({
   id,
   image,
   header,
-  type = CardStatusTypes.BEGIN,
+  type = CardTypes.BEGIN,
   hours,
   days,
   startdate,

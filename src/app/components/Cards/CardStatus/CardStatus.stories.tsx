@@ -1,6 +1,6 @@
 import React from 'react';
 import CardStatus from './CardStatus';
-import { CardTypes } from '../../enums/CardTypes';
+import { CardTypes } from '../../../enums/CardTypes';
 
 export default {
   title: 'Component/CardStatus',

@@ -1,52 +1,46 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import CardInfo from '../../components/CardInfo/CardInfo';
+import CardInfo from '../../components/Cards/CardInfo/CardInfo';
 import { SPROUTS } from '../../lib/sprouts';
-import style from './Finder.module.css';
+import style from '../../App.module.css';
 import type { Sprout } from '../../../types';
 import useSproutCards from '../../hooks/useSproutCards';
-import InfoLink from '../../components/InfoLink/InfoLink';
 import { useHistory } from 'react-router';
 import { CardTypes } from '../../enums/CardTypes';
-import { InfoLinkTypes } from '../../enums/InfoLinkTypes';
 
 export default function Finder(): JSX.Element {
   const history = useHistory();
   const { addCard } = useSproutCards();
+
   function handleAddClick(sprout: Sprout) {
     addCard(sprout);
   }
 
   return (
-    <main className={style.container}>
+    <main className={`${style.finderPage} ${style.container}`}>
       <Header
+        pageTitle="Sprossenfinder"
         className={style.header}
-        children="Sprossenfinder"
-        onClick={() => history.push('/landing')}
+        onClickLeft={() => history.push('/landing')}
+        onClickRight={() => history.push('/mysprouts')}
       />
-      <InfoLink
-        className={style.link}
-        type={InfoLinkTypes.BIG}
-        children="Meine Sprossen"
-        to="/mysprouts"
-      />
+
       <section className={style.cards}>
-        {SPROUTS.map((sprout) => (
-          <div key={sprout.id}>
-            <CardInfo
-              {...sprout}
-              onClickAdd={() =>
-                handleAddClick({
-                  ...sprout,
-                  status: CardTypes.START,
-                  startdate: '',
-                  starttime: '',
-                  enddate: '',
-                  endtime: '',
-                })
-              }
-            />
-          </div>
+        {SPROUTS.map((sprout: Sprout) => (
+          <CardInfo
+            key={sprout.id}
+            {...sprout}
+            onClickAdd={() =>
+              handleAddClick({
+                ...sprout,
+                status: CardTypes.START,
+                startdate: '',
+                starttime: '',
+                enddate: '',
+                endtime: '',
+              })
+            }
+          />
         ))}
       </section>
     </main>

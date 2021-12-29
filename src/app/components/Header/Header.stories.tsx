@@ -8,7 +8,7 @@ export default {
   component: Header,
   argTypes: {
     children: {
-      options: ['Meine Sprossen', 'Sprossenfinger', 'Info'],
+      options: ['Meine Sprossen', 'Sprossenfinder', 'Info'],
       control: { type: 'select' },
     },
   },

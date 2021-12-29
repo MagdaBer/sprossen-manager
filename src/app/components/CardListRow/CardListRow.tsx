@@ -1,12 +1,12 @@
 import React from 'react';
 import Icon from '../Icon/Icon';
 import style from './CardListRow.module.css';
-import type { IconType } from '../Icon/Icon';
+import type { IconTypes } from '../../enums/IconTypes';
 
 type CardListRowProps = {
   label: string;
   value: string;
-  iconType?: IconType;
+  iconType?: IconTypes;
 };
 
 const CardListRow = (props: CardListRowProps): JSX.Element => {

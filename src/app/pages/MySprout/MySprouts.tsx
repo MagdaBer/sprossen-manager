@@ -1,16 +1,18 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import style from './MySprouts.module.css';
+import style from '../../App.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
 import type { Sprout } from '../../../types';
-import CardInfo from '../../components/CardInfo/CardInfo';
-import CardStatus from '../../components/CardStatus/CardStatus';
+import CardInfo from '../../components/Cards/CardInfo/CardInfo';
+import CardStatus from '../../components/Cards/CardStatus/CardStatus';
 import { addDays, addHours, format } from 'date-fns';
 import AddButton from '../../components/AddButton/AddButton';
 import { CardTypes } from '../../enums/CardTypes';
+import { useHistory } from 'react-router';
 
 export default function MySprouts(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
+  const history = useHistory();
 
   function handleOnClickStart(sprout: Sprout) {
     const current = new Date();
@@ -68,11 +70,11 @@ export default function MySprouts(): JSX.Element {
   }
 
   return (
-    <main className={style.container}>
+    <main className={`${style.mySproutPage} ${style.container}`}>
       <Header
         className={style.header}
-        children="Meine Sprossen"
-        onClick={() => history.back()}
+        pageTitle="Meine Sprossen"
+        onClickLeft={() => history.push('/finder')}
       />
       {sprouts.length === 0 && (
         <section className={style.addButton}>
@@ -83,8 +85,6 @@ export default function MySprouts(): JSX.Element {
         {sprouts.map((sprout) => {
           switch (sprout.status) {
             case CardTypes.START:
-            case CardTypes.BIG:
-            case CardTypes.SMALL:
             case undefined:
               return (
                 <CardInfo
@@ -118,6 +118,9 @@ export default function MySprouts(): JSX.Element {
                   onClickRemove={() => handleOnClickRemove(sprout)}
                 />
               );
+
+            default:
+              return null;
           }
         })}
       </section>

@@ -1,15 +1,13 @@
 import React from 'react';
-import Typography from '../../components/Typography/Typography';
-import style from './Home.module.css';
+import style from '../../App.module.css';
 import { Link } from 'react-router-dom';
-import { TypographyTypes } from '../../enums/TypographyTypes';
 
 export default function Home(): JSX.Element {
   return (
-    <Link to="/landing" className={style.link}>
-      <main className={style.container}>
-        <Typography size={TypographyTypes.XL} children="Sprossen Manager" />
-      </main>
-    </Link>
+    <main className={`${style.homePage} ${style.container}`}>
+      <Link to="/landing" className={style.homePageEntranceLink}>
+        <h1>Sprossen Manager</h1>
+      </Link>
+    </main>
   );
 }

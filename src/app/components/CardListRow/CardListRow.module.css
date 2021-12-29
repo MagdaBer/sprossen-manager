@@ -1,13 +1,16 @@
 .row {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .row__icon {
   width: 1rem;
-  margin: 0 0.5rem;
+  position: absolute;
+  left: 0.3rem;
 }
 
 .row__label {
   width: 7rem;
+  margin-left: 1.6rem;
 }

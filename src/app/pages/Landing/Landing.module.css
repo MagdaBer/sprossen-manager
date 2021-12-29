@@ -1,17 +1,7 @@
-.container {
-  background-image: url('/src/app/assets/images/Page.png');
-  height: 100vh;
-  background-size: cover;
-  display: grid;
-  grid-template-rows: 3.5rem repeat(2, 4.5rem) auto;
-  justify-content: center;
-  gap: 1.7rem;
+.menu {
+  margin: 0 auto 2rem auto;
 }
 
-.menuFinder {
-  grid-row-start: 2;
-}
-
-.menuMy {
-  grid-row-start: 3;
+.menu:first-child {
+  margin-top: 4.4rem;
 }

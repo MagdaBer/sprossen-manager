@@ -1,12 +1,13 @@
 import React from 'react';
-import CardInfo from '../../components/CardInfo/CardInfo';
+import CardInfo from '../../components/Cards/CardInfo/CardInfo';
 import Header from '../../components/Header/Header';
 import { SPROUTS } from '../../lib/sprouts';
 import { useParams } from 'react-router';
-import style from './Info.module.css';
+import style from '../../App.module.css';
 import useSproutCards from '../../hooks/useSproutCards';
 import type { Sprout } from '../../../types';
 import { CardTypes } from '../../enums/CardTypes';
+import { useHistory } from 'react-router';
 
 export default function Info(): JSX.Element {
   const { addCard } = useSproutCards();
@@ -14,13 +15,18 @@ export default function Info(): JSX.Element {
     addCard(sprout);
   }
   const { id }: { id: string } = useParams();
+  const history = useHistory();
 
   const filteredSprout = SPROUTS.filter((sprout) => sprout.id === Number(id));
 
   return (
     <main className={style.container}>
-      <Header children="Info" onClick={() => history.back()} />
-      <section className={style.card}>
+      <Header
+        pageTitle="Info"
+        onClickLeft={() => history.push('/finder')}
+        onClickRight={() => history.push('/mysprouts')}
+      />
+      <section className={style.cards}>
         {filteredSprout.map((sprout) => (
           <CardInfo
             key={sprout.id}

@@ -1,13 +1,13 @@
 import React from 'react';
 import CardListRow from '../CardListRow/CardListRow';
 import style from './CardList.module.css';
-import type { IconType } from '../Icon/Icon';
+import type { IconTypes } from '../../enums/IconTypes';
 
 type CardListProps = {
   data: {
     key: string;
     value: string;
-    iconType?: IconType;
+    iconType?: IconTypes;
   }[];
   className?: string;
 };

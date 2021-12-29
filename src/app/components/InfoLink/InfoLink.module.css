@@ -1,5 +1,6 @@
 .info {
-  background-color: var(--color-background-primary);
+  background-color: var(--color-button);
+  color: var(--color-action);
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 4px rgba(179, 127, 89, 0.6);
@@ -8,12 +9,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.big {
-  height: 2.6rem;
-  width: 11.2rem;
-  justify-content: space-around;
-  padding-left: 1.5rem;
-  background-color: #fbfbfb;
+  font-size: 0.8125rem;
 }

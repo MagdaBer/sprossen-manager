@@ -1,16 +1,15 @@
 import React from 'react';
 import DropIcon from '../../assets/SVG/Drop';
 import LeafIcon from '../../assets/SVG/Leaf';
-
-export type IconType = 'dropBig' | 'dropSmall' | 'leafBig' | 'leafSmall';
+import type { IconTypes } from '../../enums/IconTypes';
 
 export type IconProps = {
-  iconType?: IconType;
+  iconType?: IconTypes;
   className?: string;
 };
 
 const getIcon = (
-  iconType?: IconType,
+  iconType?: IconTypes,
   className?: string
 ): JSX.Element | null => {
   if (!iconType) {
@@ -18,7 +17,7 @@ const getIcon = (
   }
 
   const iconSizeMap: {
-    [iconType in IconType]: JSX.Element;
+    [iconType in IconTypes]: JSX.Element;
   } = {
     dropBig: <DropIcon className={className} width="2rem" height="2.5rem" />,
     dropSmall: (

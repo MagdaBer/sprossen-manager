@@ -1,11 +1,9 @@
-.container {
-  background-image: url('/src/app/assets/images/Start.png');
-  height: 100vh;
-  background-size: cover;
+.homePage {
+  background-image: var(--picture-start);
   text-align: center;
-  padding-top: 4.5rem;
 }
 
-.link {
-  text-decoration: none;
+.homePageEntranceLink {
+  padding-top: 4.5rem;
+  height: 100vh;
 }

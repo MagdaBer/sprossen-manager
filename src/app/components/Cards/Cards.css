@@ -1,0 +1,65 @@
+.cards {
+  overflow-y: scroll;
+}
+
+.card {
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  max-width: 21.5rem;
+  margin: 1rem auto;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardContentText {
+  flex-direction: column;
+  margin: 0 0.7rem;
+  text-align: justify;
+}
+
+.cardColumnFirst {
+  width: calc(100% - 6rem);
+}
+
+.heading {
+  margin: 1rem 0 0 1.6rem;
+}
+
+.imgContainer {
+  background: #e3eed5;
+  border-radius: 0 0 0 6rem;
+  height: 6rem;
+  width: 6rem;
+  padding: 0.8rem 1rem 0 0;
+}
+
+.imgContainer > img {
+  border-radius: 50%;
+  border: 0.2em solid #fdf4ee;
+  height: 5.5rem;
+}
+
+.icon {
+  align-self: center;
+  justify-self: center;
+  flex: 0 0 auto;
+  margin: auto auto auto 10px;
+  width: auto;
+  height: 40px;
+}
+
+.textfield {
+  margin: 0 1rem 0 0.7rem;
+  text-align: justify;
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}

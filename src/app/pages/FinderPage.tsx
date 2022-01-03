@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import CardInfo from '../../components/Cards/CardInfo/CardInfo';
-import { SPROUTS } from '../../lib/sprouts';
-import style from '../../App.module.css';
-import type { Sprout } from '../../../types';
-import useSproutCards from '../../hooks/useSproutCards';
+import Header from '../components/Header/Header';
+import CardInfo from '../components/Cards/CardInfo';
+import { SPROUTS } from '../lib/sprouts';
+import '../App.less';
+import type { Sprout } from '../../types';
+import useSproutCards from '../hooks/useSproutCards';
 import { useHistory } from 'react-router';
-import { CardTypes } from '../../enums/CardTypes';
+import { CardTypes } from '../enums/CardTypes';
 
-export default function Finder(): JSX.Element {
+export default function FinderPage(): JSX.Element {
   const history = useHistory();
   const { addCard } = useSproutCards();
 
@@ -17,15 +17,14 @@ export default function Finder(): JSX.Element {
   }
 
   return (
-    <main className={`${style.finderPage} ${style.container}`}>
+    <main className="pageContainer">
       <Header
         pageTitle="Sprossenfinder"
-        className={style.header}
-        onClickLeft={() => history.push('/landing')}
+        onClickLeft={() => history.push('/menu')}
         onClickRight={() => history.push('/mysprouts')}
       />
 
-      <section className={style.cards}>
+      <section className="pageCards">
         {SPROUTS.map((sprout: Sprout) => (
           <CardInfo
             key={sprout.id}

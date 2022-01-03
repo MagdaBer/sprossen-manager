@@ -1,15 +1,15 @@
 import type { ReactNode } from 'react';
 import React from 'react';
+import '../../App.less';
 
 type ButtonProps = {
   children: ReactNode;
-  className?: string;
   onClick?: () => void;
 };
 
-function Button({ children, className, onClick }: ButtonProps): JSX.Element {
+function Button({ children, onClick }: ButtonProps): JSX.Element {
   return (
-    <button className={className} onClick={onClick}>
+    <button className="button" onClick={onClick}>
       {children}
     </button>
   );

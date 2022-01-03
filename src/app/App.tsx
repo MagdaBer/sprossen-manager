@@ -1,29 +1,29 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Landing from './pages/Landing/Landing';
-import Info from './pages/Info/Info';
-import Finder from './pages/Finder/Finder';
-import MySprouts from './pages/MySprout/MySprouts';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
+import InfoPage from './pages/InfoPage';
+import FinderPage from './pages/FinderPage';
+import MySproutsPage from './pages/MySproutsPage';
 
 function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/info/:id">
-          <Info />
+          <InfoPage />
         </Route>
         <Route path="/mysprouts">
-          <MySprouts />
+          <MySproutsPage />
         </Route>
         <Route path="/finder">
-          <Finder />
+          <FinderPage />
         </Route>
-        <Route path="/landing">
-          <Landing />
+        <Route path="/menu">
+          <MenuPage />
         </Route>
         <Route path="/">
-          <Home />
+          <HomePage />
         </Route>
       </Switch>
     </BrowserRouter>

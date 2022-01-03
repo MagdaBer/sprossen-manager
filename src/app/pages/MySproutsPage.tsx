@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import style from '../../App.module.css';
-import useSproutCards from '../../hooks/useSproutCards';
-import type { Sprout } from '../../../types';
-import CardInfo from '../../components/Cards/CardInfo/CardInfo';
-import CardStatus from '../../components/Cards/CardStatus/CardStatus';
+import Header from '../components/Header/Header';
+import '../App.less';
+import useSproutCards from '../hooks/useSproutCards';
+import type { Sprout } from '../../types';
+import CardInfo from '../components/Cards/CardInfo';
+import CardStatus from '../components/Cards/CardStatus';
 import { addDays, addHours, format } from 'date-fns';
-import AddButton from '../../components/AddButton/AddButton';
-import { CardTypes } from '../../enums/CardTypes';
+import AddButton from '../components/AddButton/AddButton';
+import { CardTypes } from '../enums/CardTypes';
 import { useHistory } from 'react-router';
 
-export default function MySprouts(): JSX.Element {
+export default function MySproutsPage(): JSX.Element {
   const { sprouts, editCard, removeCard } = useSproutCards();
   const history = useHistory();
 
@@ -70,18 +70,17 @@ export default function MySprouts(): JSX.Element {
   }
 
   return (
-    <main className={`${style.mySproutPage} ${style.container}`}>
+    <main className="pageContainer">
       <Header
-        className={style.header}
         pageTitle="Meine Sprossen"
         onClickLeft={() => history.push('/finder')}
       />
       {sprouts.length === 0 && (
-        <section className={style.addButton}>
+        <section className="mySproutsPage__addButton">
           <AddButton />
         </section>
       )}
-      <section className={style.cards}>
+      <section className="pageCards">
         {sprouts.map((sprout) => {
           switch (sprout.status) {
             case CardTypes.START:

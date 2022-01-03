@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from '../../Button/Button';
-import InfoLink from '../../InfoLink/InfoLink';
-import { CardTypes } from '../../../enums/CardTypes';
-import style from '../../../App.module.css';
-import CardList from '../../CardList/CardList';
-import { IconTypes } from '../../../enums/IconTypes';
-import type { CardContentProps } from '../../CardContent/CardContent';
-import CardContent from '../../CardContent/CardContent';
+import Button from '../Button/Button';
+import InfoLink from '../InfoLink/InfoLink';
+import { CardTypes } from '../../enums/CardTypes';
+import '../../App.less';
+import CardList from '../CardContent/CardList';
+import { IconTypes } from '../../enums/IconTypes';
+import type { CardTextProps } from '../CardContent/CardText';
+import CardText from '../CardContent/CardText';
 
 export type CardInfoProps = {
   type?: CardTypes;
@@ -15,9 +15,9 @@ export type CardInfoProps = {
   header: string;
   hours: number;
   days: number;
-  info?: CardContentProps;
-  ingredients?: CardContentProps;
-  note?: CardContentProps;
+  info?: CardTextProps;
+  ingredients?: CardTextProps;
+  note?: CardTextProps;
   startdate?: string;
   starttime?: string;
   enddate?: string;
@@ -60,15 +60,15 @@ export const CardInfo = (props: CardInfoProps): JSX.Element => {
   const content = [{ ...info }, { ...ingredients }, { ...note }];
 
   return (
-    <article className={style.card}>
-      <section className={style.cardContent}>
-        <div className={style.cardColumnFirst}>
-          <h3 className={style.heading}>{header}</h3>
+    <article className="card">
+      <section className="card__content">
+        <div className="card__column--first">
+          <h3 className="card__heading">{header}</h3>
           <section>
             <CardList data={listData} />
           </section>
         </div>
-        <div className={style.imgContainer}>
+        <div className="card__imgContainer">
           <img src={image} />
         </div>
       </section>
@@ -79,17 +79,15 @@ export const CardInfo = (props: CardInfoProps): JSX.Element => {
           }
 
           return (
-            <section
-              className={`${style.cardContent} ${style.cardContentText}`}
-            >
-              <CardContent
+            <section className="card__infoText">
+              <CardText
                 headline={contentBlock.headline}
                 content={contentBlock.content}
               />
             </section>
           );
         })}
-      <section className={style.cardButtons}>
+      <section className="card__buttons">
         {type !== CardTypes.START ? (
           <Button onClick={onClickAdd} children="Hinzufügen" />
         ) : (

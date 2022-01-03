@@ -1,0 +1,56 @@
+@import (reference) '../var.less';
+
+// Page global //
+
+.pageContainer {
+  position: absolute;
+  background-image: @picture-page;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.pageCards {
+  overflow-y: scroll;
+}
+
+#app {
+  position: fixed;
+}
+
+#app,
+.pageContainer {
+  inset: 0;
+}
+
+// Page global end //
+
+.homePage {
+  background-image: @picture-start;
+  text-align: center;
+
+  &__entranceLink {
+    padding-top: 4.5rem;
+    height: 100vh;
+  }
+}
+
+.menuPage {
+  &__button {
+    margin: 0 auto 2rem;
+  }
+  &:first-child {
+    padding-top: 4.4rem;
+  }
+}
+
+.mySproutsPage {
+  &__addButton {
+    display: flex;
+    height: 65%;
+    align-items: center;
+    justify-content: center;
+  }
+}

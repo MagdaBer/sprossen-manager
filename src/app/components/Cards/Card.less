@@ -1,78 +1,64 @@
-@import (reference) "../../var.less";
+@import (reference) '../../var.less';
 
 // Card global //
 
 .card {
-    background-color: @color-card;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    max-width: 21.5rem;
-    margin: 1rem auto;
+  background-color: @color-card;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  max-width: 21.5rem;
+  margin: 1rem auto;
 
-    &__content {
-        display: flex;
-        flex-direction: row;
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__columnFirst {
+    width: calc(100% - 6rem);
+  }
+
+  &__heading {
+    margin: 1rem 0 0 1.6rem;
+  }
+
+  &__imgContainer {
+    background: @color-card-accent;
+    border-radius: 0 0 0 6rem;
+    height: 6rem;
+    width: 6rem;
+    padding: 0.8rem 1rem 0 0;
+
+    > img {
+      border-radius: 50%;
+      border: 0.2em solid @color-card-secondary;
+      height: 5.5rem;
     }
+  }
 
-    &__columnFirst {
-        width: calc(100% - 6rem);
-    }
-
-    &__heading {
-        margin: 1rem 0 0 1.6rem;
-    }
-
-    &__imgContainer {
-        background: @color-card-accent;
-        border-radius: 0 0 0 6rem;
-        height: 6rem;
-        width: 6rem;
-        padding: 0.8rem 1rem 0 0;
-
-      > img {
-          border-radius: 50%;
-          border: 0.2em solid @color-card-secondary;
-          height: 5.5rem;
-      }
-    }
-
-    &__buttons {
-        display: flex;
-        justify-content: space-around;
-        margin: 1rem;
-    }
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+  }
 
   // CardInfo //
 
-    &__infoText {
-        flex-direction: column;
-        margin: 0 0.7rem;
-        text-align: justify;
-    }
+  &__infoText {
+    flex-direction: column;
+    margin: 0 0.7rem;
+    text-align: justify;
+  }
 
   // CardStatus //
 
   &__statusIcon {
-        align-self: center;
-        justify-self: center;
-        flex: 0 0 auto;
-        margin: auto auto auto 10px;
-        width: auto;
-        height: 40px;
+    align-self: center;
+    justify-self: center;
+    flex: 0 0 auto;
+    margin: auto auto auto 10px;
+    width: auto;
+    height: 40px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -13,9 +13,9 @@ const CardListRow = (props: CardListRowProps): JSX.Element => {
   const { label, value, iconType } = props;
   return (
     <div className="cardContent__row">
-      <Icon className="cardContent__row--icon" iconType={iconType} />
-      <div className="cardContent__row--label">{label}</div>
-      <div className="cardContent__row--value">{value}</div>
+      <Icon className="cardContent__row--hasIcon" iconType={iconType} />
+      <div className="cardContent__row--hasLabel">{label}</div>
+      <div className="cardContent__row--hasValue">{value}</div>
     </div>
   );
 };

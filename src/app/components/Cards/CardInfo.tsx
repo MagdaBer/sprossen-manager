@@ -62,7 +62,7 @@ export const CardInfo = (props: CardInfoProps): JSX.Element => {
   return (
     <article className="card">
       <section className="card__content">
-        <div className="card__columnFirst">
+        <div className="card__column--first">
           <h3 className="card__heading">{header}</h3>
           <section>
             <CardList data={listData} />

@@ -4,7 +4,7 @@ import '../App.less';
 
 export default function MenuPage(): JSX.Element {
   return (
-    <main className="pageContainer">
+    <main className="pageContainer menuPage">
       <MenuLink
         className="menuPage__button"
         to="/finder"

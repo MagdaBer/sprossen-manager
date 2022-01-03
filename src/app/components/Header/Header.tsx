@@ -43,11 +43,11 @@ function Header({
   return (
     <div className="header">
       <section className="header__menu">
-        <div className="header__menu-left">
+        <div className="header__menu--left">
           <FontAwesomeIcon icon={faChevronLeft} onClick={onClickLeft} />
           {MenuLeftIcon}
         </div>
-        <div className="header__menu-right">{MenuRightIcons}</div>
+        <div className="header__menu--right">{MenuRightIcons}</div>
       </section>
       <h2 className="header__heading">{pageTitle}</h2>
     </div>

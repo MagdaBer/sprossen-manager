@@ -67,7 +67,7 @@ export const CardStatus = (props: CardStatusProps): JSX.Element => {
     <article className="card" key={id}>
       {/* Maybe own component BEGIN */}
       <section className="card__content">
-        <div className="card__columnFirst">
+        <div className="card__column--first">
           <h3 className="card__heading">{header}</h3>
           <CardList data={listDataHead} />
         </div>

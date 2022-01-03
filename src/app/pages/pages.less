@@ -1,34 +1,5 @@
 @import (reference) '../var.less';
 
-.homePage {
-  background-image: @picture-start;
-  text-align: center;
-
-  &__entranceLink {
-    padding-top: 4.5rem;
-    height: 100vh;
-  }
-}
-
-.menuPage {
-  &__button {
-    margin: 0 auto 2rem auto;
-
-    &:first-child {
-      margin-top: 4.4rem;
-    }
-  }
-}
-
-.mySproutsPage {
-  &__addButton {
-    display: flex;
-    height: 65%;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 // Page global //
 
 .pageContainer {
@@ -53,3 +24,35 @@
 .pageContainer {
   inset: 0;
 }
+
+// Page global end //
+
+.homePage {
+  background-image: @picture-start;
+  text-align: center;
+
+  &__entranceLink {
+    padding-top: 4.5rem;
+    height: 100vh;
+  }
+}
+
+.menuPage {
+  &__button {
+    margin: 0 auto 2rem;
+  }
+    &:first-child {
+      padding-top: 4.4rem;
+    }
+
+  }
+
+.mySproutsPage {
+  &__addButton {
+    display: flex;
+    height: 65%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

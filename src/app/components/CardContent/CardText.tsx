@@ -1,11 +1,11 @@
 import React from 'react';
 
-export type CardContentProps = {
+export type CardTextProps = {
   headline?: string;
   content?: string;
 };
 
-const CardContent = (props: CardContentProps): JSX.Element => {
+const CardText = (props: CardTextProps): JSX.Element => {
   const { headline, content } = props;
 
   return (
@@ -15,4 +15,4 @@ const CardContent = (props: CardContentProps): JSX.Element => {
     </>
   );
 };
-export default CardContent;
+export default CardText;

@@ -1,6 +1,6 @@
 import React from 'react';
-import CardListRow from '../CardListRow/CardListRow';
-import style from './CardList.module.css';
+import CardListRow from './CardListRow';
+import '../../App.less';
 import type { IconTypes } from '../../enums/IconTypes';
 
 type CardListProps = {
@@ -15,7 +15,7 @@ type CardListProps = {
 const CardList = (props: CardListProps): JSX.Element => {
   const { className, data } = props;
   return (
-    <div className={`${style.cardList} ${className}`}>
+    <div className={`cardContent__list ${className}`}>
       {data.map((dataItem) => (
         <CardListRow
           label={dataItem.key}

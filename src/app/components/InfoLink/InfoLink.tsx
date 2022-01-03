@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from './InfoLink.module.css';
+import '../../App.less';
 
 type InfoLinkProps = {
   children: ReactNode;
@@ -11,7 +11,7 @@ type InfoLinkProps = {
 function InfoLink({ children, to }: InfoLinkProps): JSX.Element {
   return (
     <div>
-      <Link to={to} className={style.info}>
+      <Link to={to} className="infoLink">
         {children}
       </Link>
     </div>

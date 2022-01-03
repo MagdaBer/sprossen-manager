@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../Button/Button';
-import Icons from '../../Icon/Icon';
-import style from '../../../App.module.css';
-import { CardTypes } from '../../../enums/CardTypes';
-import { IconTypes } from '../../../enums/IconTypes';
-import CardList from '../../CardList/CardList';
+import Button from '../Button/Button';
+import Icons from '../Icon/Icon';
+import '../../App.less';
+import { CardTypes } from '../../enums/CardTypes';
+import { IconTypes } from '../../enums/IconTypes';
+import CardList from '../CardContent/CardList';
 
 type CardStatusProps = {
   id: number;
@@ -64,22 +64,22 @@ export const CardStatus = (props: CardStatusProps): JSX.Element => {
     type === CardTypes.BEGIN ? IconTypes.DROPBIG : IconTypes.LEAFBIG;
 
   return (
-    <article className={style.card} key={id}>
+    <article className="card" key={id}>
       {/* Maybe own component BEGIN */}
-      <section className={style.cardContent}>
-        <div className={style.cardColumnFirst}>
-          <h3 className={style.heading}>{header}</h3>
+      <section className="card__content">
+        <div className="card__columnFirst">
+          <h3 className="card__heading">{header}</h3>
           <CardList data={listDataHead} />
         </div>
-        <div className={style.imgContainer}>
+        <div className="card__imgContainer">
           <img src={image} />
         </div>
       </section>
-      <section className={style.cardContent}>
+      <section className="card__content">
         <CardList data={listDataContent} />
-        <Icons className={style.icon} iconType={cardContentIcon} />
+        <Icons className="card__statusIcon" iconType={cardContentIcon} />
       </section>
-      <section className={style.cardButtons}>
+      <section className="card__buttons">
         <Button onClick={onClickChangeStatus} children="Status ändern" />
         <Button onClick={onClickRemove} children="Entfernen" />
       </section>

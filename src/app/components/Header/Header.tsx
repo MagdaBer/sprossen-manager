@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Header.module.css';
+import '../../App.less';
 import { useLocation } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -41,15 +41,15 @@ function Header({
     ) : null;
 
   return (
-    <div className={style.header}>
-      <section className={style.menu}>
-        <div className={style.left}>
+    <div className="header">
+      <section className="header__menu">
+        <div className="header__menu-left">
           <FontAwesomeIcon icon={faChevronLeft} onClick={onClickLeft} />
           {MenuLeftIcon}
         </div>
-        <div className={style.right}>{MenuRightIcons}</div>
+        <div className="header__menu-right">{MenuRightIcons}</div>
       </section>
-      <h2 className={style.pageHeading}>{pageTitle}</h2>
+      <h2 className="header__heading">{pageTitle}</h2>
     </div>
   );
 }
